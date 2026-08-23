@@ -160,6 +160,8 @@ Slight changes to top floor and outside peak encounters.
 ---
 
 ### Buffed Moves
+- **Air Cutter:** 70 BP Special Atk
+- **Steel Wing:** 70 BP, 20% chance to raise def up from 10%
 - **Rapid Spin:** 50 BP, Raises SPEED +1 stage (Modernized) 
 - **Binding Moves:** Moves like bind, clamp, whirlpool remove 1/8 hp per turn for 2-5 turns
 - **Camouflage:** Raises Evasion +2 stages 
@@ -477,6 +479,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Metagross
   - Metang
   - Beldum
+  - Aerodactyl 
 
 **Skill Link**
 - Given to:
@@ -582,7 +585,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 ---
 
 ## Weather Abilities
-NOTE: **Hail update** -> Blizzard does not check accuracy in hailstorm like gen iv
+NOTE: **Hail update** -> Blizzard is accurate in Hail (Gen IV), Ice types get 1.5x Defense boost in Hail (Gen IX snowscape)
 NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
 
 **Drizzle**
@@ -641,6 +644,16 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 ---
 
 ## Pokémon Changes
+
+**some pokemon have changed stats**
+- Pidgeot lost some attack(-10) and def(-5) to gain +20 SpAtk
+- Fearow gained +10 HP
+- Swellow gained +5 Atk and +10 SpDef
+- Honchkrow remains high attack/sp atk and high hp with low defenses
+
+**Swellow**
+- Now Fighting/Flying
+- slightly buffed stats and new movepool
 
 **Typhlosion**
 - Now Fire/Ghost (Hisuian-themed).

@@ -7310,12 +7310,14 @@ const union {
 
     [SPECIES_TAILLOW] = { .learnset = {
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
         .RETURN = TRUE,
+        .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .AERIAL_ACE = TRUE,
         .FACADE = TRUE,
@@ -7325,10 +7327,12 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
+        .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_SWELLOW] = { .learnset = {
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .HYPER_BEAM = TRUE,
@@ -7336,6 +7340,7 @@ const union {
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
         .RETURN = TRUE,
+        .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
         .AERIAL_ACE = TRUE,
         .FACADE = TRUE,
@@ -7345,6 +7350,7 @@ const union {
         .THIEF = TRUE,
         .STEEL_WING = TRUE,
         .FLY = TRUE,
+        .ROCK_SMASH = TRUE,
     } },
 
     [SPECIES_SHROOMISH] = { .learnset = {
