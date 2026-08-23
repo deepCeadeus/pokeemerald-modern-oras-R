@@ -598,7 +598,12 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 
 ## Weather Abilities
 NOTE: **Hail update** -> Blizzard is accurate in Hail (Gen IV), Ice types get 1.5x Defense boost in Hail (Gen IX snowscape)
+- NEW: ICE types get boost 1.3x to ICE MOVES
+**Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
+- NEW: STEEl types get boost 1.3x to STEEL MOVES
+- NEW: GROUND types get boost 1.3x to GROUND MOVES
+**Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 
 **Drizzle**
 - Wingull

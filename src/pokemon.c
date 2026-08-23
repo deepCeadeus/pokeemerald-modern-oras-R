@@ -6873,12 +6873,35 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
     spDefense = (150 * spDefense) / 100;
     }
+    // NEW BONUS 
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (attacker->type1 == TYPE_GROUND || attacker->type2 == TYPE_GROUND)
+    && type == TYPE_GROUND)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (attacker->type1 == TYPE_STEEL || attacker->type2 == TYPE_STEEL)
+    && type == TYPE_STEEL)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
     //MODERN HAIL
     if (WEATHER_HAS_EFFECT2
     && (gBattleWeather & B_WEATHER_HAIL)
     && (defender->type1 == TYPE_ICE || defender->type2 == TYPE_ICE))
     {
     defense = (150 * defense) / 100;
+    }
+    // NEW BONUS
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_HAIL)
+    && (attacker->type1 == TYPE_ICE || attacker->type2 == TYPE_ICE)
+    && type == TYPE_ICE)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
     }
     
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, ABILITYEFFECT_MUD_SPORT, 0))
