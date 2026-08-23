@@ -5,23 +5,23 @@ You can get the hackrom documentation following [this link](https://docs.google.
 
 # ✨CHANGES FROM BASE MODERN EMERALD 
 
-### Project Goals
-This fork aims to make Modern Emerald feel more like a “Generation 3.5” experience while preserving the spirit of Pokémon Emerald.
+**TL;DR:** Use Heart Scales (Fallarbor) and go to the Ability Trainer (Lilycove). Weather is back on the menu (including hail + Ice Body). Weather Buffs for Hail and Sandstorm. Some abilities were added or tuned. Several moves were reworked/added. Elemental Fangs were added back, including **Night Slash**, **U-Turn/Volt Switch**, and **Roost**. **Sucker Punch** was added. **Prankster-style moves** now exist as move effects (granting +1 priority) instead of adding the Prankster ability. Signature moves were restored for **Wyrdeer, Farigiraf, Dundunsparce, Kleavor,** and **Annihilape**. There is a table for Judgment/Hidden Power IV's towards bottom of this README.
 
-**TL;DR:** Use Heart Scales (Fallarbor) and go to the Ability Trainer (Lilycove). Weather is back (including hail + Ice Body). Some abilities were added or tuned. Several moves were reworked/added. Elemental Fangs were added back, including **Night Slash**, **U-Turn/Volt Switch**, and **Roost**. **Sucker Punch** was added. **Prankster-style moves** now exist as move effects (granting +1 priority) instead of adding the Prankster ability. Signature moves were restored for **Wyrdeer, Farigiraf, Dundunsparce, Kleavor,** and **Annihilape**. There is a table for Judgment/Hidden Power IV's towards bottom of this README.
+### Project Goals
+My goal is make Modern Emerald feel more like a “Generation 3.5” experience while preserving the spirit of Pokémon Emerald.
 
 Key goals include:
 - Strengthening underperforming types, especially Bug and Steel.
 - Giving Pokémon clearer identities through ability and movepool changes.
 - Preserving compatibility with the original games whenever practical.
 - Adding selected Generation IV mechanics and Pokémon while maintaining a cohesive Gen III feel.
-- Keeping changes organized and easy to port to other Modern Emerald–based projects.
+- Keeping changes organized and easy to port to other Modern Emerald–based projects. (HOPEFULLY)
 
 ---
 
 ## Quality of Life & Compatibility
 
-### Selectable Shiny Rates
+### Selectable Shiny Rates (LESS GRIND)
 Players can choose one of the following shiny odds:
 - 1/16
 - 1/32
@@ -56,9 +56,6 @@ Updated to **ORAS Tileset Fork v3.4**.
 
 ## Compatibility Philosophy
 
-### Ability Compatibility
-Almost every Pokémon retains at least one original ability.
-
 ### Transfer Compatibility
 Pokémon using original moves and original abilities should generally transfer and function as expected. (TESTING)
 
@@ -66,13 +63,14 @@ Pokémon using original moves and original abilities should generally transfer a
 Mixing records with original games remains largely compatible.
 
 ### Abilities
-Many Pokémon received new secondary abilities, but original main abilities was preserved wherever possible.
+Many Pokémon received new secondary abilities. Most if not all retain at least **1** original ability. Most abilities recieved a buff. 
 
 ---
 
 ## Encounter Changes
 
 ### Daytime Encounters
+- slight changes from Modern Emerald
 
 ### Safari Zone
 **Scyther**
@@ -144,19 +142,6 @@ Slight changes to top floor and outside peak encounters.
 - **55 BP**.
 - Increased critical-hit chance.
 
-#### Stone Axe
-- Added as a **Rock-type** move.
-- **50 BP**, **90 accuracy**, hits twice.
-- Available on:
-  - **Kleavor**
-  - **Kabutops**
-
-#### Head Smash
-- Added as a **110 BP recoil** move.
-- **85 accuracy**.
-- Recoil behaves like Double-Edge (style-wise).
-- Replaces Stone Edge on many Pokémon.
-
 ---
 
 ### Buffed Moves
@@ -200,29 +185,7 @@ Because Gen IV flinch mechanics aren’t present:
 - Fire Fang: **20%** burn
 - Thunder Fang: **20%** paralysis
 - Ice Fang: **20%** freeze
-
----
-
-## Physical Fire Moves Compared
-
-**Flame Wheel**
-- 70 BP
-- 100 accuracy
-- 10% burn chance
-- EFFECT_THAW_HIT
-
-**Fire Fang**
-- 65 BP
-- 95 accuracy
-- 20% burn chance
-- EFFECT_BURN_HIT
-
-**Sacred Fire**
-- 100 bp
-- 95 accuracy
-- 50% burn chance
-- EFFECT_THAW_HIT
-
+- They use the regular in game battle effects for status
 ---
 
 ## Generation IV Move Additions
@@ -236,7 +199,9 @@ Because Gen IV flinch mechanics aren’t present:
 - 100 accuracy
 
 ### Custom Switch Logic
-U-Turn and Volt Switch use custom battle scripts and animations.
+U-Turn and Volt Switch use custom battlescripts and animations.
+
+The battle effect is labeled HitEscape like it is in other forks but this was built from the ground up using existing Baton pass battlescripts and Spikes battlescripts.
 
 Behavior:
 - No switch occurs after defeating a wild Pokémon.
@@ -246,27 +211,31 @@ Behavior:
 This prevents cases where a Pokémon vanishes and later reappears without explanation.
 
 **Wild-battle note (animation detail):**
-If a wild Pokémon uses U-Turn, it animates as if it leapt/flew away. You will see the wild pokemon return out of a thrown pokeball. This is intended for now. Later, a custom animation may be added that removes the ball for wild encounters.
+If a wild Pokémon uses U-Turn, it animates as if it leapt/flew away. You will see the wild pokemon return out of a thrown pokeball. This is intended.
 
 **Encounter table note:**
-You technically should not run into this scenario during normal encounters. If you use a randomizer and a wild Pokémon returns from a ball, you may see this behavior.
+You technically should not run into this scenario during normal encounters. If you use a randomizer and a wild Pokémon uses U Turn, you may see this behavior.
 
 If you want to remove it for alternate animations, you can remove:
-- `switchinanim BS_ATTACKER, TRUE`
-- This is found where the script follows the end path for example: `BattleScript_HitEscapeEnd:` , `BattleScript_HitEscapeEnd2` , and  `BattleScript_HitEscapeArenaFaintedMon` path where EXP is resolved and fainted pokemon are handled. 
+- `switchinanim BS_ATTACKER, TRUE` (this is the pokeball throw)
+- This is found where the script follows the end path for example: `BattleScript_HitEscapeEnd:` , `BattleScript_HitEscapeEnd2` , and  `BattleScript_HitEscapeArenaFaintedMon` path where EXP is resolved and fainted pokemon are handled.
+- How the move **works** is in battle_scripts.s 
+- How the move is **animated** is in battle_anim_scripts.s 
 
-I set this up because it looks clean in battles where you can’t send anything out. Alternativly if this move was added as a TM this will be a non issue. (Might migrate things to TM's instead at a later time) 
+I used the switchin animation in the battlescript(battle_scripts.s) because it looks clean and worked well with the move animation script (battle_anim_scripts.s).
+- Might migrate things to TM's instead at a later time. Avoids the the wild pokemon flying out of a ball thing completely. 
 
 Tested in:
 - Single Battles
 - Double Battles
 - Battle Frontier formats
 - Battle Arena
+- Battle Tents
 
 ### Sucker Punch
 - 70 BP
 - 100 accuracy
-Partially adapted from Exalted Emerald.
+Partially adapted from Exalted Emerald. Used a SpecialVar like they did. Mostly looked at the frame work to adapt it here.
 Includes a custom animation compatible with Modern Emerald assets.
 
 ### Roost
@@ -278,11 +247,11 @@ Includes a custom animation compatible with Modern Emerald assets.
 - 100 BP
 - Works like Hidden Power.
 - Refer to Hidden Power table at bottom
+- The hidden power mechanic does work with hold item bonus 1.2x
 
 ---
 
-## Other Move Additions (Custom Animations)
-Built from Modern Emerald assets.
+## Other Move Additions 
 
 ### Barrier Rush (Psyshield Bash – name too long)
 - 70 BP Physical move
@@ -302,6 +271,19 @@ Built from Modern Emerald assets.
 - 60 BP (Ghost)
 - Functions like normal Rage in Gen 3.
 - Stacks with Defiant until stat stages cap.
+
+### Stone Axe
+- Added as a **Rock-type** move.
+- **50 BP**, **90 accuracy**, hits twice.
+- Available on:
+  - **Kleavor**
+  - **Kabutops**
+
+### Head Smash
+- Added as a **110 BP recoil** move.
+- **85 accuracy**.
+- Recoil behaves like Double-Edge (style-wise).
+- Replaces Stone Edge on many Pokémon.
 
 ---
 
@@ -416,7 +398,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - Added a Guts Failsafe to activate at low HP
 - This exists as an alternative to Flame Orb
 - Works Like Run Away
-- +1 ATK at 30% if <=DEFAULT ATK STAGE
+- +1 ATK at 30% HP if <=DEFAULT ATK STAGE
 - Will only trigger if not under a status (STATUS1)
 - Will not go over +1 ATK
 - Ramps up each turn to hit net +1 stage over default
@@ -470,9 +452,10 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 **Berserk**
 - 1.5× Special Attack below 50% HP.
 - Given to:
-  - Omastar
+  - Omastar (**LORD HELIX**)
   - Farigiraf
   - Deoxys-D
+  - Houndoom
 
 **Sharpness**
 - 1.2× boost to slicing moves.
@@ -587,10 +570,6 @@ Additional Scizor changes:
 - Bloodmoon Ursaluna
 - Typhlosion
 
-Corrected type display in new UBOUND style battle menu for these abilities.
-They should now permanantly show the normal moves as the changed type in battle and show correct STAB and Type Effectiveness.
-Fixed a bug that occured when switching moves in new battle menu.
-
 NOTE: Silk Scarf still gives a 1.2× hold boost to type changed moves.
 A workaround was applied so correct hold items give the 1.2× boost to type changed normal moves.
 
@@ -598,7 +577,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 
 ## Weather Abilities
 NOTE: **Hail update** -> Blizzard is accurate in Hail (Gen IV), Ice types get 1.5x Defense boost in Hail (Gen IX snowscape)
-- NEW: ICE types get boost 1.3x to ICE MOVES
+- NEW: ICE types get boost 1.3x to ICE MOVES 
 **Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
 - NEW: STEEl types get boost 1.3x to STEEL MOVES
@@ -695,8 +674,6 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 ## Item Changes
 
 ### Hold Items
-In physical/special split mode:
-- Hold item boosts now function correctly.
 - All type-boosting hold items increased to 1.2× power.
 - (Maybe you won’t use Leftovers now?!)
 
