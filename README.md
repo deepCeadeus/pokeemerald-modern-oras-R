@@ -412,6 +412,18 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 		- Example A -2 speed stage will go up +1 every turn if run away is triggered -> -2,-1,0,+1, Ability stops.
 		- the 1.2x defenses boost is mainly for triggering the ability consistantly it allows for the rare cases where you have a sliver of HP and can counter. 
 
+**Guts**
+- Added a Guts Failsafe to activate at low HP
+- This exists as an alternative to Flame Orb
+- Works Like Run Away
+- +1 ATK at 30% if <=DEFAULT ATK STAGE
+- Will only trigger if not under a status (STATUS1)
+- Will not go over +1 ATK
+- Ramps up each turn to hit net +1 stage over default
+- If at +2 and above from sword dance, ETC it will not activate
+- Rare case exists where you get status after this activates and get boost from both failsafe and normal guts attack buff.
+	- If you last long enough for that its fair game the way I see it.
+
 **Multitype**
 - REMOVED: damage boost from matching correct hold items to attack types. Arceus retained Normal type.
 - NEW: Type changes based on hold item effect.
