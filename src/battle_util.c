@@ -2806,6 +2806,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         effect++;
                     }
                     break;    
+                case ABILITY_GUTS:
+                    if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
+                        && (gBattleMons[battler].statStages[STAT_ATK] <= DEFAULT_STAT_STAGE)
+                    	&& !(gBattleMons[battler].status1))
+                    {
+                        gBattleMons[battler].statStages[STAT_ATK]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_ATK;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_GutsActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;      
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
                     //TRUANT HEALS ON SLEEP STATUS

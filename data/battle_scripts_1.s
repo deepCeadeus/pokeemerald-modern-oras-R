@@ -4194,7 +4194,13 @@ BattleScript_LightningRodActivates::
 	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
 	printstring STRINGID_PKMNRAISEDSPATK
 	waitmessage B_WAIT_TIME_LONG
-	end3	
+	end3
+	
+BattleScript_GutsActivates::
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDATK
+	waitmessage B_WAIT_TIME_LONG
+	end3			
 
 BattleScript_TraceActivates::
 	pause B_WAIT_TIME_SHORT
