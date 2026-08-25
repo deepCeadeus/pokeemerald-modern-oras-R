@@ -2938,7 +2938,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && !IS_BATTLER_OF_TYPE(battler, moveType)
                  && gBattleMons[battler].hp != 0)
                 {
-                    u8 moveType = CheckAbilityChangeMoveType(move);
+                //Hidden Power
+                if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
+        {
+        	GET_MOVE_TYPE(move, moveType);
+        }
+    		//Judgment
+    		else if (move == MOVE_JUDGMENT && (gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE))
+    	{ 
+        	moveType = CheckAbilityChangeMoveType(move);
+    	}    
+    		//Everything else
+    		else
+        	moveType = CheckAbilityChangeMoveType(move);
                 {
                     SET_BATTLER_TYPE(battler, moveType);
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);

@@ -1349,7 +1349,7 @@ u8 CheckAbilityChangeMoveType(u16 move) // handles move type change
 {
     u8 moveType = gBattleMoves[move].type;
     u8 ability  = gBattleMons[gBattlerAttacker].ability;
-
+  
     if (moveType == TYPE_NORMAL && gBattleMoves[move].power != 0)
         switch (ability)
         {
@@ -1383,6 +1383,14 @@ u8 CheckAbilityChangeMoveType(u16 move) // handles move type change
           moveType = gBattleMons[gBattlerAttacker].type1;
         break;
         }
+        /*case ABILITY_MULTITYPE:
+        {
+          if ((move == MOVE_HYPER_VOICE) && (gBattleMons[gBattlerAttacker].species == SPECIES_UNOWN))
+              moveType = gBattleMons[gBattlerAttacker].type1;
+          else
+              moveType = TYPE_NORMAL;
+        break;
+        }*/
         case ABILITY_FORECAST:
         {
             if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_RAIN)
@@ -1396,6 +1404,19 @@ u8 CheckAbilityChangeMoveType(u16 move) // handles move type change
         break;
         }
     }
+    if (moveType == TYPE_MYSTERY && gBattleMoves[move].power != 0)
+        switch (ability)
+        {
+        case ABILITY_MULTITYPE:
+        {
+          //if (move == MOVE_JUDGMENT)
+              moveType = gBattleMons[gBattlerAttacker].type1;
+              //moveType = TYPE_GHOST; test
+          //else
+              //moveType = TYPE_MYSTERY;
+        break;
+        }
+        }
     return moveType;
 }
 
@@ -1407,7 +1428,7 @@ u8 DisplayMoveTypeChange(u16 move)
 {
     u8 moveType = gBattleMoves[move].type;
     u8 ability  = gBattleMons[gActiveBattler].ability;
-
+    
     if (moveType == TYPE_NORMAL && gBattleMoves[move].power != 0)
         switch (ability)
         {
@@ -1441,6 +1462,14 @@ u8 DisplayMoveTypeChange(u16 move)
           moveType = gBattleMons[gActiveBattler].type1;
         break;
         }
+        /*case ABILITY_MULTITYPE:
+        {
+          if ((move == MOVE_HYPER_VOICE) && (gBattleMons[gActiveBattler].species == SPECIES_UNOWN))
+              moveType = gBattleMons[gActiveBattler].type1;
+          else
+              moveType = TYPE_NORMAL;    
+        break;
+        }*/
         case ABILITY_FORECAST:
         {
             if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_RAIN)
@@ -1454,6 +1483,19 @@ u8 DisplayMoveTypeChange(u16 move)
         break;
         }
     }
+    if (moveType == TYPE_MYSTERY && gBattleMoves[move].power != 0)
+        switch (ability)
+        {
+        case ABILITY_MULTITYPE:
+        {
+          //if (move == MOVE_JUDGMENT)
+              moveType = gBattleMons[gActiveBattler].type1;
+              //moveType = TYPE_GHOST; test
+          //else
+            //  moveType = TYPE_MYSTERY;
+        break;
+        }
+        }
     return moveType;
 }
 
@@ -1658,8 +1700,17 @@ static void Cmd_typecalc(void)
     }
 
     GET_MOVE_TYPE(gCurrentMove, moveType);
-    if (gCurrentMove == MOVE_HIDDEN_POWER || gCurrentMove == MOVE_JUDGMENT)
+    // Hidden Power
+    if (gCurrentMove == MOVE_HIDDEN_POWER || (gCurrentMove == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType();
+    	}
+    //Judgment	
+    else if (gCurrentMove == MOVE_JUDGMENT && (gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE))
+    { 
+        moveType = CheckAbilityChangeMoveType(gCurrentMove);
+    }    
+    //Everything else
     else
         moveType = CheckAbilityChangeMoveType(gCurrentMove);
 
@@ -2012,9 +2063,17 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
     if (move == MOVE_STRUGGLE)
         return 0;
-
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+     //Hidden Power
+     if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType();
+        }
+    //Judgment
+    else if (move == MOVE_JUDGMENT && (gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
+    	{ 
+        moveType = CheckAbilityChangeMoveType(move);
+    	}    
+    //Everything else
     else
         moveType = CheckAbilityChangeMoveType(move);
 
@@ -2077,17 +2136,34 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
 // used to properly display type effectiveness on battle menu ui without breaking existing functions of AI_TypeCalc
 u8 AI_TypeDisplay(u16 move, u16 targetSpecies, u8 targetAbility)
-{
+{   //Fix for Multitype/Color Change
+    u8 targetId = GetBattlerAtPosition(BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler))); //check battler 
     s32 i = 0;
     u8 flags = 0;
-    u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
+    u8 type1 = gBattleMons[targetId].type1; //current type
+    u8 type2 = gBattleMons[targetId].type2; //current type
     u8 moveType;
+    //OLD and Does not recognize MULTITYPE/COLORCHANGE type change in UI
+    //Its here if the new one breaks something
+    /*s32 i = 0;
+    u8 flags = 0;
+    u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
+    u8 moveType;*/
 
     if (move == MOVE_STRUGGLE)
         return 0;
-
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    //Hidden Power
+    if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE)))
+        {
         moveType = getHiddenPowerType2();
+        }
+    //Judgment    
+
+    else if (move == MOVE_JUDGMENT && (gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
+    	{ 
+        moveType = DisplayMoveTypeChange(move);
+    	}    
+    //Everything else
     else
         moveType = DisplayMoveTypeChange(move);
 

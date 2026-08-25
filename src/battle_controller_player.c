@@ -41,6 +41,7 @@
 #include "tx_randomizer_and_challenges.h"
 #include "menu.h"
 #include "pokemon_summary_screen.h"
+#include "constants/abilities.h"
 
 static void PlayerHandleGetMonData(void);
 static void PlayerHandleSetMonData(void);
@@ -1844,7 +1845,7 @@ bool8 IsMoveSTAB(u16 move, u8 battlerId)
     if (IS_MOVE_STATUS(move))
         return FALSE;
     
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -1921,7 +1922,7 @@ static void MoveSelectionDisplayMoveTypeDoubles(u8 targetId)
     type = DisplayMoveTypeChange(move);
 
 
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
@@ -1972,7 +1973,7 @@ static void MoveSelectionDisplayMoveType(void) //Made this display a Move Type I
     type = DisplayMoveTypeChange(move);
 
 
-    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT)
+    if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {
         u8 typeBits  = ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_HP_IV) & 1) << 0)
                      | ((GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_ATK_IV) & 1) << 1)
