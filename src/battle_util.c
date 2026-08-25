@@ -2938,11 +2938,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                  && !IS_BATTLER_OF_TYPE(battler, moveType)
                  && gBattleMons[battler].hp != 0)
                 {
+                    u8 moveType = CheckAbilityChangeMoveType(move);
+                {
                     SET_BATTLER_TYPE(battler, moveType);
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_ColorChangeActivates;
                     effect++;
+                }
                 }
                 break;
              // CHANGE ON HIT TESTING This allows it to be traced, knock off removes it, arceus can switch from trick then get hit and change again. Might remove later if i block trace, knock off, skill swap, etc 
