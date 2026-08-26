@@ -545,7 +545,7 @@ static void HandleInputChooseTarget(void)
     {
         PlaySE(SE_SELECT);
         gSprites[gBattlerSpriteIds[gMultiUsePlayerCursor]].callback = SpriteCB_HideAsMoveTarget;
-        if (gSaveBlock2Ptr->optionsCursorMemory)
+        if ((gSaveBlock2Ptr->optionsCursorMemory) == 0)
         {
             gTargetSelectionCursor[gActiveBattler] = gMultiUsePlayerCursor;
             gTargetSelectionMove[gActiveBattler] = gMoveSelectionCursor[gActiveBattler];
@@ -724,7 +724,7 @@ static void HandleInputChooseMove(void)
                      && gTargetSelectionMove[gActiveBattler] == gMoveSelectionCursor[gActiveBattler]
                      && !(gAbsentBattlerFlags & gBitTable[gTargetSelectionCursor[gActiveBattler]])
                      && gBattleMons[gTargetSelectionCursor[gActiveBattler]].hp > 0
-                     && (gSaveBlock2Ptr->optionsCursorMemory))
+                     && ((gSaveBlock2Ptr->optionsCursorMemory) == 0))
                 gMultiUsePlayerCursor = gTargetSelectionCursor[gActiveBattler];
             else if (gAbsentBattlerFlags & gBitTable[GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT)])
                 gMultiUsePlayerCursor = GetBattlerAtPosition(B_POSITION_OPPONENT_RIGHT);
@@ -1840,10 +1840,20 @@ u8 TypeEffectiveness(u8 targetId)
 bool8 IsMoveSTAB(u16 move, u8 battlerId)
 {
 	u8 moveType = DisplayMoveTypeChange(move);
+    u16 species = GetMonData(&gPlayerParty[gBattlerPartyIndexes[gActiveBattler]], MON_DATA_SPECIES);
 
 
     if (IS_MOVE_STATUS(move))
         return FALSE;
+    
+    if ((species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;
+    if ((species == SPECIES_SCYTHER) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;
+    if ((species == SPECIES_KABUTOPS) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;      
+    
+        
     
     if (move == MOVE_HIDDEN_POWER || move == MOVE_JUDGMENT && !(gBattleMons[gActiveBattler].ability == ABILITY_MULTITYPE))
     {

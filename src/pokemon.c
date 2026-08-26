@@ -6917,15 +6917,15 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
-    gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2))
+        gBattleMovePower = (150 * gBattleMovePower) / 100;
+    if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (200 * gBattleMovePower) / 100;
-    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE))
+    if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
         // Scyther and Kabutops get STAB for SLASH
-    if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH))
+    if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100; 
-    if ((attacker->species == SPECIES_KABUTOPS) && (gCurrentMove == MOVE_SLASH))
+    if ((attacker->species == SPECIES_KABUTOPS) && (gCurrentMove == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;       
 
     // Self-destruct / Explosion cut defense in half
@@ -8416,7 +8416,8 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
         else
             abilityNum = 1;
     }
-    if ((abilityNum == 0) && (species == SPECIES_ARTICUNO 
+    if ((abilityNum == 0) 
+           && (species == SPECIES_ARTICUNO 
             || species == SPECIES_ZAPDOS 
             || species == SPECIES_MOLTRES
             || species == SPECIES_MEWTWO
@@ -8424,7 +8425,10 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
             || species == SPECIES_ENTEI
             || species == SPECIES_SUICUNE
             || species == SPECIES_HO_OH
-            || species == SPECIES_LUGIA)
+            || species == SPECIES_LUGIA
+            || species == SPECIES_DEOXYS_ATTACK
+            || species == SPECIES_DEOXYS_DEFENSE
+            || species == SPECIES_DEOXYS_SPEED)
             && (gSaveBlock1Ptr->tx_Mode_Legendary_Abilities == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[0];
     else if ((abilityNum == 1)
@@ -8432,7 +8436,10 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
              || species == SPECIES_YANMEGA
              || species == SPECIES_CLAMPERL
              || species == SPECIES_HUNTAIL
-             || species == SPECIES_GOREBYSS)
+             || species == SPECIES_GOREBYSS
+             || species == SPECIES_REGIROCK
+             || species == SPECIES_REGICE
+             || species == SPECIES_REGISTEEL)
             && (gSaveBlock1Ptr->tx_Mode_Modern_Types == 0))
         gLastUsedAbility = gSpeciesInfo[species].abilities_old[1];
     else if (abilityNum)
@@ -12319,7 +12326,11 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_ELECTIVIRE            //-Fighting
     || species == SPECIES_YANMEGA               //+Flying, -Dragon
     || species == SPECIES_HUNTAIL               //-Psychic
-    || species == SPECIES_GOREBYSS))            //-Dark
+    || species == SPECIES_GOREBYSS              //-Dark
+    || species == SPECIES_PINSIR                //-Flying
+    || species == SPECIES_BLASTOISE             //-Steel
+    || species == SPECIES_SWELLOW               //-Fighting
+    || species == SPECIES_AMPHAROS))            //-Dragon
     {
         if (typeNum == 1)
             type = gSpeciesInfo[species].types_old[0];
