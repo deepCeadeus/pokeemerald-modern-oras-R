@@ -2931,26 +2931,26 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
             switch (gLastUsedAbility)
             {
             case ABILITY_COLOR_CHANGE:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                {
+                //Hidden Power effect check
+                //Checks for Hidden Power effect Judgment
+                //MultiType changes its type thats why this check exists
+                if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
+        {
+        	GET_MOVE_TYPE(move, moveType);
+        }
+    		//Everything else (including Aerilate, Dragonize, Pixilate, Forecast)
+    		else
+    		{
+        	moveType = CheckAbilityChangeMoveType(move);
+        	}
+        	//Re-Ordered this to bottom so it doesnt read stale data from && !IS_BATTLER_OF_TYPE(battler, moveType) causing type changing abilities not to work correctly
+        	if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && move != MOVE_STRUGGLE
                  && gBattleMoves[move].power != 0
                  && TARGET_TURN_DAMAGED
                  && !IS_BATTLER_OF_TYPE(battler, moveType)
                  && gBattleMons[battler].hp != 0)
-                {
-                //Hidden Power
-                if (move == MOVE_HIDDEN_POWER || (move == MOVE_JUDGMENT && !(gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE)))
-        {
-        	GET_MOVE_TYPE(move, moveType);
-        }
-    		//Judgment
-    		else if (move == MOVE_JUDGMENT && (gBattleMons[gBattlerAttacker].ability == ABILITY_MULTITYPE))
-    	{ 
-        	moveType = CheckAbilityChangeMoveType(move);
-    	}    
-    		//Everything else
-    		else
-        	moveType = CheckAbilityChangeMoveType(move);
                 {
                     SET_BATTLER_TYPE(battler, moveType);
                     PREPARE_TYPE_BUFFER(gBattleTextBuff1, moveType);

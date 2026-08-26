@@ -6663,7 +6663,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (attacker->ability == ABILITY_HYPER_CUTTER && (gCurrentMove == MOVE_VICE_GRIP))
         attack = (120 * attack) / 100;
     if (attacker->ability == ABILITY_LEGEND_PLATE && (gCurrentMove == MOVE_JUDGMENT))
-        spAttack = (200 * spAttack) / 100;      
+        spAttack = (200 * spAttack) / 100;
+    if (attacker->ability == ABILITY_MULTITYPE && (gCurrentMove == MOVE_JUDGMENT))
+        spAttack = (120 * spAttack) / 100;//hold item fix(intended STAB x1.2)         
     if (attacker->ability == ABILITY_CACOPHONY && (gCurrentMove == MOVE_SNORE || gCurrentMove == MOVE_UPROAR || gCurrentMove == MOVE_HYPER_VOICE || gCurrentMove == MOVE_BUG_BUZZ))
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_STRONG_JAW && (gCurrentMove == MOVE_BITE || gCurrentMove == MOVE_CRUNCH || gCurrentMove == MOVE_FIRE_FANG || gCurrentMove == MOVE_HYPER_FANG || gCurrentMove == MOVE_ICE_FANG || gCurrentMove == MOVE_POISON_FANG || gCurrentMove == MOVE_THUNDER_FANG))

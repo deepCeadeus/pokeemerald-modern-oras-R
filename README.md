@@ -245,9 +245,9 @@ Includes a custom animation compatible with Modern Emerald assets.
 
 ### Judgment
 - 100 BP
-- Works like Hidden Power.
+- Uses the hidden power effect when not using the Multitype Ability. Works like normal gen iv Judgment while ability is Multitype. 
 - Refer to Hidden Power table at bottom
-- The hidden power mechanic does work with hold item bonus 1.2x
+
 
 ---
 
@@ -416,7 +416,15 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
         - Trace can change type on hit with correct hold effects.
         - Knock off can remove type by removing item (reverts to normal)
         - Trick can switch items and change type on hit
-  
+- Judgment now changes with type!
+
+**Legend Plate** 
+- Arceus gains second new ability
+- Retains Normal Type but judgment takes new form-> Works like Hidden power use the table at the bottom to pick your type or let RNG pick.
+- Static 2x boost to judgment (2.4x with correct hold item) TESTED
+- Compared to Multitype Judgment (STAB (1.5)x 1.2 Hold Effect = 1.8x) TESTED
+- 
+
 ---
 
 ## New Ability Distributions

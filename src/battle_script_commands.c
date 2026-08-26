@@ -1383,14 +1383,6 @@ u8 CheckAbilityChangeMoveType(u16 move) // handles move type change
           moveType = gBattleMons[gBattlerAttacker].type1;
         break;
         }
-        /*case ABILITY_MULTITYPE:
-        {
-          if ((move == MOVE_HYPER_VOICE) && (gBattleMons[gBattlerAttacker].species == SPECIES_UNOWN))
-              moveType = gBattleMons[gBattlerAttacker].type1;
-          else
-              moveType = TYPE_NORMAL;
-        break;
-        }*/
         case ABILITY_FORECAST:
         {
             if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_RAIN)
@@ -1462,14 +1454,6 @@ u8 DisplayMoveTypeChange(u16 move)
           moveType = gBattleMons[gActiveBattler].type1;
         break;
         }
-        /*case ABILITY_MULTITYPE:
-        {
-          if ((move == MOVE_HYPER_VOICE) && (gBattleMons[gActiveBattler].species == SPECIES_UNOWN))
-              moveType = gBattleMons[gActiveBattler].type1;
-          else
-              moveType = TYPE_NORMAL;    
-        break;
-        }*/
         case ABILITY_FORECAST:
         {
             if (WEATHER_HAS_EFFECT && gBattleWeather & B_WEATHER_RAIN)
