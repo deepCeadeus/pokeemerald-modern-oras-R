@@ -539,6 +539,8 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - Given to:
   - Nidoking Evo. line
   - Nidoqueen Evo. line
+  - Goldeen + Seaking (Territorial goldfish/betta)
+  - Barboach + Whiscash (Territorial catfish)
 
 **Run Away** 
 - Electivire gets reworked Run Away as it is closer to Motor Drive/Rattled. 
