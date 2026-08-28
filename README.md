@@ -321,15 +321,28 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - No Electric Immunity added (Standard gen 3 mechanics here).
 
 **Forecast**
-- Recovers 1/8 HP in Weather (sandstorm is not considered weather).
+- Recovers 1/8 HP in Weather each turn (sandstorm is not considered weather).
+
+**Ice Body and Rain Dish**
+- Boosted to recover 1/12 HP per turn in Weather vs 1/16
+
+**Water Veil**
+- Added a 1/16 HP recovery unconditional. (think aqua ring)
 
 **Early Bird**
-- Recovers 1/8 HP while sleeping.
+- Recovers 1/8 HP while sleeping each turn.
 - Balanced by the reduced sleep counter (Original ability effect unchanged).
 
 **Truant**
-- Recovers 1/8 HP while sleeping.
+- Recovers 1/8 HP while sleeping each turn.
 - Still skips every other turn while awake. 
+
+**Oblivious**
+- Intimidate prevented
+- Taunt immunity
+
+**Own Tempo**
+- Intimidate prevented
 
 **Color Change**
 - Still changes on hit
@@ -655,6 +668,23 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 - Swellow gained +5 Atk and +10 SpDef
 - Honchkrow remains high attack/sp atk and high hp with low defenses
 
+**Wailmer + Wailord**
+- Significant changes to base stats. 
+- Retains HP
+- Stats moved around and new ability:
+        [SPECIES_WAILORD] =
+        .baseHP        = 170,
+        .baseAttack    = 50, // -40
+        .baseAttack_old    = 90,
+        .baseDefense   = 75, // +30
+        .baseDefense_old   = 45,
+        .baseSpeed     = 20, // -40
+        .baseSpeed_old     = 60,
+        .baseSpAttack  = 110, // +20
+        .baseSpAttack_old  = 90,
+        .baseSpDefense = 75, // +30
+        .baseSpDefense_old = 45,
+        .abilities = {ABILITY_HUGE_POWER, ABILITY_OBLIVIOUS},
 **Swellow**
 - Now Fighting/Flying
 - slightly buffed stats and new movepool

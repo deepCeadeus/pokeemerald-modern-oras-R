@@ -8437,6 +8437,8 @@ u8 GetAbilityBySpecies(u16 species, u8 abilityNum)
              || species == SPECIES_CLAMPERL
              || species == SPECIES_HUNTAIL
              || species == SPECIES_GOREBYSS
+             || species == SPECIES_WAILMER
+             || species == SPECIES_WAILORD
              || species == SPECIES_REGIROCK
              || species == SPECIES_REGICE
              || species == SPECIES_REGISTEEL)

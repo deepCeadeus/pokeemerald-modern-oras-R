@@ -7580,6 +7580,7 @@ const union {
         .PROTECT = TRUE,
         .RAIN_DANCE = TRUE,
         .FRUSTRATION = TRUE,
+        .IRON_TAIL = TRUE,
         .EARTHQUAKE = TRUE,
         .RETURN = TRUE,
         .DOUBLE_TEAM = TRUE,
