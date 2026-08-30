@@ -394,8 +394,9 @@
 #define STRINGID_PKMNPICKEDUPITEMWITH	    393
 #define STRINGID_PKMNRAISEDSPATK            394
 #define STRINGID_PKMNRAISEDATK              395
+#define STRINGID_PKMNPICKEDUPGEMWITH	    396
 
-#define BATTLESTRINGS_COUNT                 396
+#define BATTLESTRINGS_COUNT                 397
 
 // This is the string id that gBattleStringsTable starts with.
 // String ids before this (e.g. STRINGID_INTROMSG) are not in the table,

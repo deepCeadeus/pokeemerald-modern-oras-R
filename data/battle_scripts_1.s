@@ -4660,9 +4660,17 @@ BattleScript_BerryConfuseHealEnd2::
 
 BattleScript_BerryStatPickupEnd2::
 	printstring STRINGID_PKMNPICKEDUPITEMWITH
-	playanimation BS_EFFECT_BATTLER, B_ANIM_HELD_ITEM_EFFECT
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT
 	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_BerryStatPickupDoStatUp
 BattleScript_BerryStatPickupDoStatUp::
+	call BattleScript_StatUp
+	return
+
+BattleScript_GemStatPickupEnd2::
+	printstring STRINGID_PKMNPICKEDUPGEMWITH // Sableye Text
+	playanimation BS_TARGET, B_ANIM_HELD_ITEM_EFFECT
+	statbuffchange STAT_CHANGE_ALLOW_PTR, BattleScript_GemStatPickupDoStatUp
+BattleScript_GemStatPickupDoStatUp::
 	call BattleScript_StatUp
 	return
 

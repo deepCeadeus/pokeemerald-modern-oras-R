@@ -230,6 +230,7 @@ extern const u8 BattleScript_MultitypeActivates[];
 extern const u8 BattleScript_BerryStatPickupEnd2[];
 extern const u8 BattleScript_LightningRodActivates[];
 extern const u8 BattleScript_GutsActivates[];
+extern const u8 BattleScript_GemStatPickupEnd2[];
 //tx_randomizer_and_challenges
 extern const u8 BattleScript_Safari_OneTypeChallengeCaptureBlocked[];
 extern const u8 BattleScript_Safari_NuzlockeCaptureBlocked[];

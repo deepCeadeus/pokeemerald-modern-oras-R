@@ -3010,17 +3010,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+              //NOTE TO SELF For Pickup: AUG/29/26 changed all battler to gBattlerTarget hopefully this will prevent any bugs and keep it consistant. I was unsure if battler was the appropriate designation. Cute Charm uses gBattlerAttacker and gBattlerTarget. Added in if/else for sableye text. otherwise its just gBattlescriptCurrInstr = (BattleScript_BerryStatPickupEnd2); effect++;
              case ABILITY_PICKUP:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                && gBattlerAttacker != battler
+                && gBattlerAttacker != gBattlerTarget
                 && gBattleMons[gBattlerAttacker].hp != 0
-		&& gBattleMons[battler].hp != 0
+		&& gBattleMons[gBattlerTarget].hp != 0
 		&& !gProtectStructs[gBattlerAttacker].confusionSelfDmg
 		&& (Random() % 5) == 0)
                     {
                     for (i = 0; i < NUM_STATS - 1; i++)
                     {
-                        if (gBattleMons[battler].statStages[STAT_ATK + i] < MAX_STAT_STAGE)
+                        if (gBattleMons[gBattlerTarget].statStages[STAT_ATK + i] < MAX_STAT_STAGE)
                             break;
                     }
                     if (i != NUM_STATS - 1)
@@ -3028,7 +3029,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         do
                         {
                             i = Random() % (NUM_STATS - 1);
-                        } while (gBattleMons[battler].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
+                        } while (gBattleMons[gBattlerTarget].statStages[STAT_ATK + i] == MAX_STAT_STAGE);
 
                         PREPARE_STAT_BUFFER(gBattleTextBuff1, i + 1);
 
@@ -3041,15 +3042,25 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleTextBuff2[6] = STRINGID_STATROSE >> 8;
                         gBattleTextBuff2[7] = EOS;
 
-                        gEffectBattler = battler;
-                        gBattleScripting.battler = battler;
+                        gEffectBattler = gBattlerTarget;
+                        gBattleScripting.battler = gBattlerTarget;
                         SET_STATCHANGER(i + 1, 2, FALSE);
                         gBattleScripting.animArg1 = STAT_ANIM_PLUS2 + (i + 1);
                         gBattleScripting.animArg2 = 0;
                         gBattleCommunication[MOVE_EFFECT_BYTE] += MOVE_EFFECT_AFFECTS_USER;
                         BattleScriptPushCursor();
+                        {
+                        if (gBattleMons[gBattlerTarget].species == SPECIES_SABLEYE)
+                        {
+                        gBattlescriptCurrInstr = (BattleScript_GemStatPickupEnd2);
+                        effect++;
+                        }
+                        else
+                        {
                         gBattlescriptCurrInstr = (BattleScript_BerryStatPickupEnd2);
                         effect++;
+                        }
+                        }
                     }
                     } 
                     break;   
