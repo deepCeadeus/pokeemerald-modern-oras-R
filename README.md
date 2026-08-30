@@ -294,14 +294,14 @@ These moves:
 - Have increased priority.
 - Must be relearned using a Heart Scale at MOVE RELEARNER in Fallarbor.
 - The moves are recover, will o wisp, taunt, and torment with +1 priority
-- 
+ 
 Available on:
 - Murkrow / Honchkrow
   -Taunt/Torment 
 - Shuppet / Banette
   -Taunt/Torment/Will O Wisp 
 - Sableye
-  - Taunt/Torment/Will O Wisp/Recover
+  -Taunt/Torment/Will O Wisp/Recover
 
 ---
 
@@ -311,7 +311,7 @@ Most Pokémon now have access to a secondary ability. Many received alternatives
 
 Abilities can be changed using the **Ability Changer in Lilycove City**.
 
-### Ability Reworks
+### Ability Reworks & Buffs
 
 **LightningRod**
 - Works like Speed Boost for Sp. Atk. 
@@ -336,6 +336,14 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 **Truant**
 - Recovers 1/8 HP while sleeping each turn.
 - Still skips every other turn while awake. 
+
+**Vital Spirit and Insomnia**
+- Vital Spirit prevents sleep and boosts fighting moves in a pinch
+- Insomnia prevents sleep and reduces damage from DARK TYPE (damage/2)
+
+**Magma Armor**
+- Retains orignial anti freeze but adds water resistance (damage/2) 
+- Camerupt and Magcargo get 2x super effective instead of 4x from water.
 
 **Oblivious**
 - Intimidate prevented
@@ -669,6 +677,31 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 - Fearow gained +10 HP
 - Swellow gained +5 Atk and +10 SpDef
 - Honchkrow remains high attack/sp atk and high hp with low defenses
+- Unown now 70 in all stats total 420
+- Tropious gained HP 130 vs 99. Other stats mostly the same rounded up or down.
+
+**Sableye**
+- Keen Eye/ Pickup (new flavor text: Finds Gem instead of a (Starf) Berry for stat boost in battle.)
+- Pickup plays kind of like a random boost from simple.
+- Taunt(Priority)/Night Slash/Will O Wisp(Priority)/Recover(Priority) is a full kit for stalling. Pickup gives it some use in battle pyramid and the random boost might help with swinging some battles.
+- Sableye basically has a full prankster kit at the move relearner. Modern keen eye and pickup exist for added utility. 
+- Changed egg group
+- EGG_GROUP_MONSTER, EGG_GROUP_HUMAN_LIKE
+- More egg moves:
+              MOVE_PSYCH_UP,
+              MOVE_RECOVER, (this is the vanilla move. Relearner has the Prankser +1 priority move/move text will say prankster in it)
+              MOVE_MOONLIGHT,
+              MOVE_BEAT_UP,
+              MOVE_DARK_PULSE,
+              MOVE_OCTAZOOKA,
+              MOVE_ANCIENT_POWER,
+              MOVE_MIRROR_COAT,
+              MOVE_LOW_KICK,
+              MOVE_FLAIL,
+              MOVE_YAWN,
+              MOVE_CRUNCH,
+              MOVE_PLAY_ROUGH,
+              MOVE_MOONBLAST),
 
 **Wailmer + Wailord**
 - Significant changes to base stats. 
@@ -687,6 +720,15 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
         .baseSpDefense = 75, // +30
         .baseSpDefense_old = 45,
         .abilities = {ABILITY_HUGE_POWER, ABILITY_OBLIVIOUS},
+
+**Chimecho**
+- Psychic/Steel
+- Its a wind chime
+- Previous evo learns BugBuzz
+
+**Magmortor**
+- Fire/Steel
+
 **Swellow**
 - Now Fighting/Flying
 - slightly buffed stats and new movepool

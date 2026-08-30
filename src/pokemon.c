@@ -6614,6 +6614,26 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (defender->ability == ABILITY_DAMP && type == TYPE_FIRE)
             spAttack /= 2;
     }
+    if (gSaveBlock2Ptr->optionStyle == 0)
+    {
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            gBattleMovePower /= 2;
+    }
+    else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
+        if (defender->ability == ABILITY_MAGMA_ARMOR && type == TYPE_WATER)
+            spAttack /= 2;
+    }
+    if (gSaveBlock2Ptr->optionStyle == 0)
+    {
+        if (defender->ability == ABILITY_INSOMNIA && type == TYPE_DARK)
+            gBattleMovePower /= 2;
+    }
+    else if (gSaveBlock2Ptr->optionStyle == 1)
+    {
+        if (defender->ability == ABILITY_INSOMNIA && type == TYPE_DARK)
+            spAttack /= 2;
+    }
     if ((defender->ability != ABILITY_NONE) 
     && (gSaveBlock2Ptr->optionsDifficulty == 2) 
     && (side == B_SIDE_PLAYER) 
@@ -6917,6 +6937,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+    	//Vital Spirit Buff
+    if (type == TYPE_FIGHTING && attacker->ability == ABILITY_VITAL_SPIRIT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if ((attacker->species == SPECIES_SPINDA) && ((Random() % 100) <= 2) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (200 * gBattleMovePower) / 100;
@@ -12326,6 +12348,8 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_SWALOT                //-Normal
     || species == SPECIES_LUVDISC               //-Fairy
     || species == SPECIES_ELECTIVIRE            //-Fighting
+    || species == SPECIES_MAGMORTAR             //-Steel
+    || species == SPECIES_CHIMECHO              //-Steel
     || species == SPECIES_YANMEGA               //+Flying, -Dragon
     || species == SPECIES_HUNTAIL               //-Psychic
     || species == SPECIES_GOREBYSS              //-Dark

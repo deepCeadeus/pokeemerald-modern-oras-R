@@ -11855,6 +11855,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpDefense = 90, //+10
         .baseSpDefense_old = 80,
         .types = { TYPE_PSYCHIC, TYPE_STEEL },
+        .types_old = { TYPE_PSYCHIC, TYPE_PSYCHIC },
         .catchRate = 45,
         .expYield = 147,
         .evYield_HP        = 0,
@@ -12390,7 +12391,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_MAGMORTAR] =
+    [SPECIES_MAGMORTAR] = //modified
     {
         .baseHP        = 75,
         .baseAttack    = 95,
@@ -12398,7 +12399,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 83,
         .baseSpAttack  = 125,
         .baseSpDefense = 95,
-        .types = { TYPE_FIRE, TYPE_FIRE},
+        .types = { TYPE_FIRE, TYPE_STEEL},
+        .types_old = { TYPE_FIRE, TYPE_FIRE},
         .catchRate = 30,
         .expYield = 207,
         .evYield_HP        = 0,

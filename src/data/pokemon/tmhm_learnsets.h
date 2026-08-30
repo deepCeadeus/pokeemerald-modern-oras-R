@@ -10825,6 +10825,7 @@ const union {
         
     [SPECIES_MAGMORTAR] = { .learnset = {
         .FOCUS_PUNCH = TRUE,
+        .ROAR = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
