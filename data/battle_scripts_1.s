@@ -2290,6 +2290,7 @@ BattleScript_FacadeDoubleDmg::
 BattleScript_EffectFocusPunch::
 	attackcanceler
 	jumpifnodamage BattleScript_HitFromAccCheck
+	jumpifability BS_ATTACKER, ABILITY_INNER_FOCUS, BattleScript_HitFromAccCheck,
 	ppreduce
 	printstring STRINGID_PKMNLOSTFOCUS
 	waitmessage B_WAIT_TIME_LONG
@@ -4276,6 +4277,7 @@ BattleScript_IntimidateActivatesLoop:
 	jumpifability BS_TARGET, ABILITY_WHITE_SMOKE, BattleScript_IntimidatePrevented
 	jumpifability BS_TARGET, ABILITY_OBLIVIOUS, BattleScript_IntimidatePrevented
 	jumpifability BS_TARGET, ABILITY_OWN_TEMPO, BattleScript_IntimidatePrevented
+	jumpifability BS_TARGET, ABILITY_INNER_FOCUS, BattleScript_IntimidatePrevented
 	statbuffchange STAT_CHANGE_NOT_PROTECT_AFFECTED | STAT_CHANGE_ALLOW_PTR, BattleScript_IntimidateActivatesLoopIncrement
 	jumpifbyte CMP_GREATER_THAN, cMULTISTRING_CHOOSER, 1, BattleScript_IntimidateActivatesLoopIncrement
 	setgraphicalstatchangevalues

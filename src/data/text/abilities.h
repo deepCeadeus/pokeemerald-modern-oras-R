@@ -1,6 +1,6 @@
 #include "constants/abilities.h"
 static const u8 sNoneDescription[] = _("");
-static const u8 sStenchDescription[] = _("Helps repel wild Pokémon.");
+static const u8 sStenchDescription[] = _("Reduces foe's accuracy.");
 static const u8 sDrizzleDescription[] = _("Summons rain in battle.");
 static const u8 sSpeedBoostDescription[] = _("Gradually boosts Speed.");
 static const u8 sBattleArmorDescription[] = _("Blocks critical hits.");
@@ -38,7 +38,7 @@ static const u8 sIlluminateDescription[] = _("Encounter rate increases.");
 static const u8 sTraceDescription[] = _("Copies special ability.");
 static const u8 sHugePowerDescription[] = _("Raises Attack.");
 static const u8 sPoisonPointDescription[] = _("Poisons foe on contact.");
-static const u8 sInnerFocusDescription[] = _("Prevents flinching.");
+static const u8 sInnerFocusDescription[] = _("Flinch & Intimidate immune.");
 static const u8 sMagmaArmorDescription[] = _("FRZ immune & Water resist.");
 static const u8 sWaterVeilDescription[] = _("Burn immunity & Aqua Ring.");
 static const u8 sMagnetPullDescription[] = _("Traps Steel-type Pokémon.");

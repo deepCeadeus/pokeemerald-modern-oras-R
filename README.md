@@ -352,6 +352,10 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 **Own Tempo**
 - Intimidate prevented
 
+**Inner Focus**
+- Intimidate prevented
+- Flinch Prevented
+- NEW: Focus Punch cant loose focus. Always goes to accuracy check next turn. 
 **Color Change**
 - Still changes on hit
 - New effect: Kecleon's normal moves change with the type change
@@ -460,6 +464,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Porygon-Z
   - Hitmontop
   - Deoxys-A
+  - Beedrill
 
 **Iron Fist**
 - 1.2× boost to punching moves.
@@ -549,6 +554,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Nidoqueen Evo. line
   - Goldeen + Seaking (Territorial goldfish/betta)
   - Barboach + Whiscash (Territorial catfish)
+  - Beautifly
 
 **Run Away** 
 - Electivire gets reworked Run Away as it is closer to Motor Drive/Rattled. 
