@@ -356,6 +356,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - Intimidate prevented
 - Flinch Prevented
 - NEW: Focus Punch cant loose focus. Always goes to accuracy check next turn. 
+
 **Color Change**
 - Still changes on hit
 - New effect: Kecleon's normal moves change with the type change
@@ -471,6 +472,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - Given to:
   - Hitmonchan
   - Breloom
+  - Ledian
 
 **Reckless**
 - 1.2× boost to recoil moves.
@@ -570,7 +572,6 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 - Unown (also has levitate)
   - Unown has new movepool  
  
-
 ---
 
 ## Type-Changing Abilities
@@ -588,7 +589,6 @@ These abilities change move typing only and do not add extra damage boosts.
 
 **Pixilate**
 - Sylveon
-
 
 **Metal Coat** (new)
 - Makes Normal-type moves Steel.
@@ -726,6 +726,14 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
         .baseSpDefense = 75, // +30
         .baseSpDefense_old = 45,
         .abilities = {ABILITY_HUGE_POWER, ABILITY_OBLIVIOUS},
+
+**Ledian**
+- Bug/Normal
+
+**Shedinja**
+- added +60 to special attack
+- equal attack / special attack (90)
+- This is a consistancy change as its stats never changed when the phys/spec split happened.
 
 **Chimecho**
 - Psychic/Steel
