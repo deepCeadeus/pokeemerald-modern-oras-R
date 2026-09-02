@@ -12355,6 +12355,7 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_GOREBYSS              //-Dark
     || species == SPECIES_PINSIR                //-Flying
     || species == SPECIES_BLASTOISE             //-Steel
+    || species == SPECIES_LEDIAN                //+Normal, -Bug
     || species == SPECIES_SWELLOW               //-Fighting
     || species == SPECIES_AMPHAROS))            //-Dragon
     {

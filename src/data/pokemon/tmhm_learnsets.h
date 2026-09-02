@@ -11897,6 +11897,7 @@ const union {
     } },
 
     [SPECIES_BUTTERFREE] = { .learnset = {
+        .CALM_MIND = TRUE,
         .TOXIC = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
