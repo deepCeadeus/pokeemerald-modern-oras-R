@@ -2871,6 +2871,7 @@ BattleScript_EffectHitEscape::
     waitmessage B_WAIT_TIME_LONG
     jumpifmovehadnoeffect BattleScript_MoveEnd
     seteffectwithchance
+    moveendfromto MOVEEND_ON_DAMAGE_ABILITIES, MOVEEND_CHOICE_MOVE//Fix for colorchange/poisonpoint/roughskin trigger sept/6/2026 
     jumpifbattletype BATTLE_TYPE_TRAINER, BattleScript_HitEscapeTrainer
     tryfaintmon BS_TARGET
     tryfaintmon_spikes BS_TARGET, BattleScript_HitEscapeEnd
