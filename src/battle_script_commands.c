@@ -2120,20 +2120,34 @@ u8 AI_TypeCalc(u16 move, u16 targetSpecies, u8 targetAbility)
 
 // used to properly display type effectiveness on battle menu ui without breaking existing functions of AI_TypeCalc
 u8 AI_TypeDisplay(u16 move, u16 targetSpecies, u8 targetAbility)
-{   //Fix for Multitype/Color Change
-    u8 targetId = GetBattlerAtPosition(BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler))); //check battler 
+{   
+    // The lines to u8 movetype; are the original 
+    // commented out type1,2 for NEW changes
     s32 i = 0;
     u8 flags = 0;
-    u8 type1 = gBattleMons[targetId].type1; //current type
-    u8 type2 = gBattleMons[targetId].type2; //current type
+    //u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
     u8 moveType;
-    //OLD and Does not recognize MULTITYPE/COLORCHANGE type change in UI
-    //Its here if the new one breaks something
-    /*s32 i = 0;
-    u8 flags = 0;
-    u8 type1 = GetTypeBySpecies(targetSpecies, 1), type2 = GetTypeBySpecies(targetSpecies, 2);
-    u8 moveType;*/
-
+    //NEW 
+    u8 targetId; //original doesnt ask for target id to get type
+    u8 type1, type2; //simplified to later determine
+    
+    if (!IsDoubleBattle())
+    	targetId = GetBattlerAtPosition(BATTLE_OPPOSITE(GetBattlerPosition(gActiveBattler)));//This is how it is in battle_controller_player.c for singles
+    else
+    	targetId = GetBattlerAtPosition(GetBattlerPosition(gMultiUsePlayerCursor));//This is how it is in battle_controller_player.c for doubles
+    	
+    //For arceus/kecleon when opponent has these abilities so type display is current changed type and effectivness arrow is correct
+    if (targetAbility == ABILITY_COLOR_CHANGE || targetAbility == ABILITY_MULTITYPE)
+    {
+    	type1 = gBattleMons[targetId].type1;//battle_controller_player.c wants targetId
+    	type2 = gBattleMons[targetId].type2;//
+    }	
+    else
+    {
+    	type1 = GetTypeBySpecies(targetSpecies, 1);//this is what originally determines type
+    	type2 = GetTypeBySpecies(targetSpecies, 2);//the original code only checked species type not current type for type changing abilities so effectiveness was locked to default
+    }
+    // Start of the original code with judgment added
     if (move == MOVE_STRUGGLE)
         return 0;
     //Hidden Power
