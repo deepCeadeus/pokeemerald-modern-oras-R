@@ -477,6 +477,7 @@ static const u16 sSandshrewLevelUpLearnset[] = {
 };
 
 static const u16 sSandslashLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_U_TURN),
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_DEFENSE_CURL),
     LEVEL_UP_MOVE( 1, MOVE_SAND_ATTACK),
@@ -3492,6 +3493,7 @@ static const u16 sAzumarillLevelUpLearnset[] = {
 static const u16 sSudowoodoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ROCK_THROW),
     LEVEL_UP_MOVE( 1, MOVE_MIMIC),
+    LEVEL_UP_MOVE( 1, MOVE_SPIKES),
     LEVEL_UP_MOVE( 9, MOVE_FLAIL),
     LEVEL_UP_MOVE(17, MOVE_LOW_KICK),
     LEVEL_UP_MOVE(25, MOVE_ROCK_SLIDE),
@@ -7852,6 +7854,7 @@ static const u16 sGalladeLevelUpLearnset[] = {
 };
 
 static const u16 sGlaceonLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_BATON_PASS),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_ICE_FANG),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),

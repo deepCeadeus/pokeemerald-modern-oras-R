@@ -4828,6 +4828,7 @@ const union {
         .FOCUS_PUNCH = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
+        .BULLET_SEED = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .TAUNT = TRUE,

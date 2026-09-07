@@ -630,7 +630,7 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 - Kyogre
 
 **Drought**
-- Charmander line
+- Charmander line (charizard gained u-turn)
 - Vulpix
 - Ninetales
 - Moltres
@@ -640,10 +640,11 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 - Groudon
 
 **Sand Stream**
-- Sandshrew Evo. line
+- Sandshrew Evo. line (sandslash gained u-turn->can set weather and pivot)
 - Shuckle
 - Phanpy Evo. line
 - Tyranitar
+- Probopass (lost sturdy->in return it gets boost from sandstorm and can learn volt switch)
 
 **Snow Warning**
 - Smoochum
@@ -655,11 +656,11 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 **Ice Body**
 - Seel
 - Dewgong
-- Articuno
+- Articuno (can learn u-turn)
 - Spheal Evo. line
 - Snoorunt Evo. line
 - Regice
-- Glaceon
+- Glaceon (baton pass pivot)
 
 **Air Lock**
 - Zubat Evo. line

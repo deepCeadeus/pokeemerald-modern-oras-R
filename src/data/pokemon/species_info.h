@@ -12648,7 +12648,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = 70,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_MINERAL, EGG_GROUP_MINERAL},
-        .abilities = {ABILITY_STURDY, ABILITY_MAGNET_PULL},
+        .abilities = {ABILITY_SAND_STREAM, ABILITY_MAGNET_PULL},
         .bodyColor = BODY_COLOR_GRAY,
         .noFlip = FALSE,
     },
