@@ -332,6 +332,8 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 **Early Bird**
 - Recovers 1/8 HP while sleeping each turn.
 - Balanced by the reduced sleep counter (Original ability effect unchanged).
+- Boosts priority move damage 1.25x -> QUICK_ATTACK, NIGHT_SHADE, MACH_PUNCH, SUCKER_PUNCH, EXTREME_SPEED, FAKE_OUT (Most early bird pokemon have fake out, quick attack or sucker punch)
+- Example: rest heals hp + status -> reduced sleep counter, heals 1/8 hp after taking dmg while asleep each turn. 
 
 **Truant**
 - Recovers 1/8 HP while sleeping each turn.

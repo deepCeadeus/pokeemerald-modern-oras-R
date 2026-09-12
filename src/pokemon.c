@@ -6698,7 +6698,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     {
        spAttack = (120 * spAttack) / 100;
        attack = (120 * attack) / 100;
+    }
+    //Early Bird
+    if (attacker->ability == ABILITY_EARLY_BIRD && (gCurrentMove == MOVE_QUICK_ATTACK || gCurrentMove == MOVE_NIGHT_SHADE || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_SUCKER_PUNCH || gCurrentMove == MOVE_EXTREME_SPEED || gCurrentMove == MOVE_FAKE_OUT))
+    {
+       spAttack = (125 * spAttack) / 100;
+       attack = (125 * attack) / 100;
     }        
+    //        
     if (attacker->ability == ABILITY_PLUS)
     {
     if (ABILITY_ON_FIELD2(ABILITY_MINUS))
