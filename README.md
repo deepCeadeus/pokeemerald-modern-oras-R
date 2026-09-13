@@ -766,7 +766,10 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 - Now Bug/Flying (Mega themed) 
 
 **Scyther and Kabutops**
-- Both get 1.5x damage bonus (STAB) to Normal Type Slash 70bp 
+- Both get 1.5x damage bonus (STAB) to Normal Type Slash 70bp
+
+**Shiftry**
+- Gets STAB for Flying type attacks 
 
 ---
 

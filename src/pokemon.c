@@ -6951,6 +6951,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (200 * gBattleMovePower) / 100;
     if ((attacker->species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+        //Shiftry flying stab
+    if ((attacker->species == SPECIES_SHIFTRY) && (moveType == TYPE_FLYING) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        gBattleMovePower = (150 * gBattleMovePower) / 100;    
         // Scyther and Kabutops get STAB for SLASH
     if ((attacker->species == SPECIES_SCYTHER) && (gCurrentMove == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         gBattleMovePower = (150 * gBattleMovePower) / 100; 

@@ -1848,6 +1848,8 @@ bool8 IsMoveSTAB(u16 move, u8 battlerId)
     
     if ((species == SPECIES_GROUDON) && (moveType == TYPE_FIRE) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         return TRUE;
+    if ((species == SPECIES_SHIFTRY) && (moveType == TYPE_FLYING) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
+        return TRUE;    
     if ((species == SPECIES_SCYTHER) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
         return TRUE;
     if ((species == SPECIES_KABUTOPS) && (move == MOVE_SLASH) && (gSaveBlock1Ptr->tx_Mode_New_Stats == 1))
