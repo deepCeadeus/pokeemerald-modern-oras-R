@@ -1,23 +1,14 @@
-# Pokémon Modern Emerald ORAS 3.4R
-Modern Emerald Documents
+# Pokémon Modern Emerald R
+
+Vanilla Modern Emerald Documents here
 You can get more information about Modern Emerald at [Pokecommunity](https://www.pokecommunity.com/showthread.php?t=494005)
 You can get the hackrom documentation following [this link](https://docs.google.com/spreadsheets/d/1QEFJmFhfaZqgxSUnM7MFpufrnrRk_NMzNoNWl2m3y_0/edit#gid=414283818)
 
 # ✨CHANGES FROM BASE MODERN EMERALD 
 
-**TL;DR:** Use Heart Scales (Fallarbor) and go to the Ability Trainer (Lilycove). Weather is back on the menu (including hail + Ice Body). Weather Buffs for Hail and Sandstorm. Some abilities were added or tuned. Several moves were reworked/added. Elemental Fangs were added back, including **Night Slash**, **U-Turn/Volt Switch**, and **Roost**. **Sucker Punch** was added. **Prankster-style moves** now exist as move effects (granting +1 priority) instead of adding the Prankster ability. Signature moves were restored for **Wyrdeer, Farigiraf, Dundunsparce, Kleavor,** and **Annihilape**. There is a table for Judgment/Hidden Power IV's towards bottom of this README.
-
-### Project Goals
-My goal is make Modern Emerald feel more like a “Generation 3.5” experience while preserving the spirit of Pokémon Emerald.
-
-Key goals include:
-- Strengthening underperforming types, especially Bug and Steel.
-- Giving Pokémon clearer identities through ability and movepool changes.
-- Preserving compatibility with the original games whenever practical.
-- Adding selected Generation IV mechanics and Pokémon while maintaining a cohesive Gen III feel.
-- Keeping changes organized and easy to port to other Modern Emerald–based projects. (HOPEFULLY)
-
----
+Think of Modern Emerald R as a balance patch on top of Vanilla Modern Emerald. 
+It has various move pool changes and additions, balance changes, some type changes, new abilities, and some custom ability features to make older abilities more useful. 
+The goal was to make the game feel a little more like a gen iv game.
 
 ## Quality of Life & Compatibility
 
@@ -38,12 +29,9 @@ Additional features:
 
 ---
 
-## ORAS Tileset Update
-Updated to **ORAS Tileset Fork v3.4**.
-
----
-
 ## Event & Map Fixes
+
+ORAS Tileset fixes
 
 ### Deoxys Meteor Fix
 - Missing meteor metatile data prevented proper Deoxys form interactions.
@@ -54,7 +42,7 @@ Updated to **ORAS Tileset Fork v3.4**.
 
 ---
 
-## Compatibility Philosophy
+## Compatibility
 
 ### Transfer Compatibility
 Pokémon using original moves and original abilities should generally transfer and function as expected. (TESTING)
@@ -70,7 +58,8 @@ Many Pokémon received new secondary abilities. Most if not all retain at least 
 ## Encounter Changes
 
 ### Daytime Encounters
-- slight changes from Modern Emerald
+- Slight changes from Modern Emerald
+- Can follow the vanilla modern emerald documentaion  
 
 ### Safari Zone
 **Scyther**
@@ -109,7 +98,7 @@ Several existing encounters were reduced from 5% to 4% to make room.
 Slight changes to top floor and outside peak encounters.
 
 ### Night Encounters 
-
+- I have not explicitly documented night encounters. You can always check the wild encounters JSON. (A little mystery is healthy) 
 - All major land routes have updated night encounters fishing, rocksmash, and surf included. 
 - Night time should feel different than day.
 - Treeko, Torchic, Mudkip and evolutions can be found in night encounters 
@@ -137,6 +126,7 @@ Slight changes to top floor and outside peak encounters.
 
 #### Night Shade
 - Now a **40 BP Special** priority move.
+- Night shade was always in a wierd place. It was either really strong late game or weak early on.
 
 #### Water Gun
 - **55 BP**.
@@ -275,6 +265,7 @@ Includes a custom animation compatible with Modern Emerald assets.
 ### Stone Axe
 - Added as a **Rock-type** move.
 - **50 BP**, **90 accuracy**, hits twice.
+- This was reworked for stability instead of adding another mechanic to manage (stealth rock).
 - Available on:
   - **Kleavor**
   - **Kabutops**
@@ -284,11 +275,13 @@ Includes a custom animation compatible with Modern Emerald assets.
 - **85 accuracy**.
 - Recoil behaves like Double-Edge (style-wise).
 - Replaces Stone Edge on many Pokémon.
+- Toned down to fill the niche of both stone edge and headsmash.
 
 ---
 
 ## Hidden Priority Moves (Prankster-Style)
 Several Pokémon gain hidden “Prankster-style” priority moves.
+(The goal was to give a Prankster set to sableye without altering how the game determines priority. This was mainly done for stability instead of adding another mechanic to potentially break something)
 
 These moves:
 - Have increased priority.
