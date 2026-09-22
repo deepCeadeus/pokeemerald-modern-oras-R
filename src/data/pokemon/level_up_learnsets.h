@@ -8548,6 +8548,8 @@ static const u16 sKleavorLevelUpLearnset[] = {
 
 static const u16 sVictiniLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SEARING_SHOT),
+    LEVEL_UP_MOVE( 1, MOVE_U_TURN),
+    LEVEL_UP_MOVE( 1, MOVE_VOLT_SWITCH),
     LEVEL_UP_MOVE( 1, MOVE_FOCUS_ENERGY),
     LEVEL_UP_MOVE( 1, MOVE_CONFUSION),
     LEVEL_UP_MOVE( 1, MOVE_EMBER),
@@ -8556,6 +8558,7 @@ static const u16 sVictiniLearnset[] = {
     LEVEL_UP_MOVE(17, MOVE_HEADBUTT),
     LEVEL_UP_MOVE(25, MOVE_FIRE_BLAST),
     LEVEL_UP_MOVE(33, MOVE_REVERSAL),
+    LEVEL_UP_MOVE(40, MOVE_VOLT_TACKLE),
     LEVEL_UP_MOVE(49, MOVE_PSYCHO_CUT),
     LEVEL_UP_MOVE(65, MOVE_DOUBLE_EDGE),
     LEVEL_UP_MOVE(73, MOVE_BLAST_BURN),
@@ -8594,6 +8597,8 @@ static const u16 sTestLearnset[] = {
 static const u16 sArticunoGalarLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_COSMIC_POWER),
+    LEVEL_UP_MOVE( 1, MOVE_U_TURN),
+    LEVEL_UP_MOVE( 1, MOVE_TRICK),
     LEVEL_UP_MOVE( 5, MOVE_CONFUSION),
     LEVEL_UP_MOVE(10, MOVE_REFLECT),
     LEVEL_UP_MOVE(15, MOVE_HYPNOSIS),
@@ -8613,6 +8618,9 @@ static const u16 sArticunoGalarLevelUpLearnset[] = {
 static const u16 sZapdosGalarLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_PECK),
     LEVEL_UP_MOVE( 1, MOVE_FOCUS_ENERGY),
+    LEVEL_UP_MOVE( 1, MOVE_U_TURN),
+    LEVEL_UP_MOVE( 1, MOVE_LOW_KICK),
+    LEVEL_UP_MOVE( 1, MOVE_KNOCK_OFF),
     LEVEL_UP_MOVE( 5, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE(10, MOVE_LIGHT_SCREEN),
     LEVEL_UP_MOVE(15, MOVE_PLAY_ROUGH),
@@ -8631,7 +8639,11 @@ static const u16 sZapdosGalarLevelUpLearnset[] = {
 
 static const u16 sMoltresGalarLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GUST),
+    LEVEL_UP_MOVE( 1, MOVE_PAIN_SPLIT),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 1, MOVE_U_TURN),
+    LEVEL_UP_MOVE( 1, MOVE_SUCKER_PUNCH),
+    LEVEL_UP_MOVE( 1, MOVE_TAIL_GLOW),
     LEVEL_UP_MOVE( 5, MOVE_PURSUIT),
     LEVEL_UP_MOVE(10, MOVE_SAFEGUARD),
     LEVEL_UP_MOVE(15, MOVE_WING_ATTACK),

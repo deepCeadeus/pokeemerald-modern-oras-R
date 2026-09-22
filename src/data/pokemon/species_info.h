@@ -13152,7 +13152,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = 100,
         .growthRate = GROWTH_SLOW,
         .eggGroups = { EGG_GROUP_NO_EGGS_DISCOVERED, EGG_GROUP_NO_EGGS_DISCOVERED },
-        .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_FLASH_FIRE},
+        .abilities = {ABILITY_VITAL_SPIRIT, ABILITY_SUPER_LUCK},
         .bodyColor = BODY_COLOR_YELLOW,
         .noFlip = FALSE,
     },

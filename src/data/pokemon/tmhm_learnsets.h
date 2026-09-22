@@ -23348,6 +23348,7 @@ const union {
         .RETURN = TRUE,
         .BRICK_BREAK = TRUE,
         .DOUBLE_TEAM = TRUE,
+        .REFLECT = TRUE,
         .AERIAL_ACE = TRUE,
         .TORMENT = TRUE,
         .SECRET_POWER = TRUE,
