@@ -960,7 +960,11 @@ static const bool8 sValidApprenticeMoves[MOVES_COUNT] =
     [MOVE_RAGE_FIST] = TRUE,
     [MOVE_HYPER_DRILL] = TRUE,
     [MOVE_JUDGMENT] = TRUE,
-    
+    [MOVE_BLOOD_MOON] = FALSE,
+    [MOVE_FREEZING_GLARE] = FALSE,
+    [MOVE_THUNDEROUS_KICK] = FALSE,
+    [MOVE_FIERY_WRATH] = FALSE,
+    [MOVE_SEARING_SHOT] = FALSE,
 };
 
 // The possible questions to ask after the initial 3 WHICH MON questions. Retrieved from here and shuffled

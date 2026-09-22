@@ -389,8 +389,12 @@
 #define MOVE_RAGE_FIST 385
 #define MOVE_HYPER_DRILL 386
 #define MOVE_JUDGMENT 387
-
-#define MOVES_COUNT 388
+#define MOVE_BLOOD_MOON 388
+#define MOVE_FREEZING_GLARE 389
+#define MOVE_THUNDEROUS_KICK 390
+#define MOVE_FIERY_WRATH 391
+#define MOVE_SEARING_SHOT 392
+#define MOVES_COUNT 393
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

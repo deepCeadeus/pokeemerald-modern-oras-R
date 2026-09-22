@@ -388,4 +388,9 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_RAGE_FIST] = _("Rage Fist"),
     [MOVE_HYPER_DRILL] = _("Hyper Drill"),
     [MOVE_JUDGMENT] = _("Judgment"),
+    [MOVE_BLOOD_MOON] = _("Blood Moon"),
+    [MOVE_FREEZING_GLARE] = _("Freez. Glare"),
+    [MOVE_THUNDEROUS_KICK] = _("Thund. Kick"),
+    [MOVE_FIERY_WRATH] = _("Fiery Wrath"),
+    [MOVE_SEARING_SHOT] = _("Searing Shot"),
 };

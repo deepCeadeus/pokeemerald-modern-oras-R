@@ -1549,6 +1549,27 @@ static const u8 sJudgmentDescription[] = _(
     "The effectiveness varies\n"
     "with the user.");             
 
+static const u8 sBloodMoonDescription[] = _(
+    "Unleashes the blood moon.\n"
+    "The moon torments the user.");
+
+static const u8 sFreezingGlareDescription[] = _(
+    "Shoots psychic power from\n"
+    "the eyes. May freeze.");
+
+static const u8 sThunderousKickDescription[] = _(
+    "Uses a lightning-like kick\n"
+    "to hit. Lowers foe's Defense.");
+
+static const u8 sFieryWrathDescription[] = _(
+    "An attack fueled by your\n"
+    "wrath. May cause flinching.");
+
+static const u8 sSearingShotDescription[] = _(
+    "Scarlet flames torch\n"
+    "everything around the user.");
+
+
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
 const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
 {
@@ -1939,4 +1960,9 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_RAGE_FIST - 1] = sRageFistDescription,
     [MOVE_HYPER_DRILL - 1] = sHyperDrillDescription,
     [MOVE_JUDGMENT - 1] = sJudgmentDescription,
+    [MOVE_BLOOD_MOON - 1] = sBloodMoonDescription,
+    [MOVE_FREEZING_GLARE - 1] = sFreezingGlareDescription,
+    [MOVE_THUNDEROUS_KICK - 1] = sThunderousKickDescription,
+    [MOVE_FIERY_WRATH - 1] = sFieryWrathDescription,
+    [MOVE_SEARING_SHOT - 1] = sSearingShotDescription,
 };
