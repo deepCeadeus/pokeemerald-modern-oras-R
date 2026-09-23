@@ -2807,7 +2807,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_LIGHTNING_ROD:
-                    if ((gBattleMons[battler].statStages[STAT_SPEED] < MAX_STAT_STAGE && gDisableStructs[battler].isFirstTurn != 2)
+                    if ((gBattleMons[battler].statStages[STAT_SPATK] < MAX_STAT_STAGE && gDisableStructs[battler].isFirstTurn != 2)
                     	&& WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN))
                     {
                         gBattleMons[battler].statStages[STAT_SPATK]++;

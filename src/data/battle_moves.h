@@ -5446,7 +5446,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
         .pp = 10,
         .target = MOVE_TARGET_BOTH,
         .priority = 0,
-        .secondaryEffectChance = 20,
+        .secondaryEffectChance = 30, //buffed
         .flags = FLAG_PROTECT_AFFECTED | FLAG_MIRROR_MOVE_AFFECTED | FLAG_KINGS_ROCK_AFFECTED,
         .category = MOVE_CATEGORY_SPECIAL,
     },
