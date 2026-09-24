@@ -6641,7 +6641,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = { EGG_GROUP_FIELD, EGG_GROUP_FIELD },
-        .abilities = {ABILITY_GUTS, ABILITY_GUTS},
+        .abilities = {ABILITY_GUTS, ABILITY_PICKUP},
         .safariZoneFleeRate = 0,
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
@@ -13054,7 +13054,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
     },
     [SPECIES_URSALUNA] =
     {
-          .baseHP        = 130,
+        .baseHP        = 130,
         .baseAttack    = 140,
         .baseDefense   = 105,
         .baseSpeed     = 50,
@@ -13074,7 +13074,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .friendship = STANDARD_FRIENDSHIP,
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroups = (EGG_GROUP_FIELD),
-        .abilities = {ABILITY_GUTS, ABILITY_IMMUNITY},
+        .abilities = {ABILITY_GUTS, ABILITY_DAMP},
         .bodyColor = BODY_COLOR_BROWN,
         .noFlip = FALSE,
     },
