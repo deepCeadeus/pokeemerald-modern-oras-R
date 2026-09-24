@@ -3373,7 +3373,8 @@ void SetMoveEffect(bool8 primary, u8 certain)
                 }
                 break;
             case MOVE_EFFECT_RECHARGE:
-                if (gBattleMons[gBattlerAttacker].species == SPECIES_URSALUNA_BLOODMOON && gChosenMove == MOVE_BLOOD_MOON)
+                if (gChosenMove == MOVE_BLOOD_MOON)
+                //(gBattleMons[gBattlerAttacker].species == SPECIES_URSALUNA_BLOODMOON && gChosenMove == MOVE_BLOOD_MOON)
                 {
                 gBattleMons[gEffectBattler].status2 |= STATUS2_TORMENT;
                 //gDisableStructs[gEffectBattler].rechargeTimer = 2;
@@ -5158,7 +5159,7 @@ static void Cmd_moveend(void)
              && gChosenMove != MOVE_STRUGGLE
              && (*choicedMoveAtk == MOVE_NONE || *choicedMoveAtk == MOVE_UNAVAILABLE))
             {
-                if ((gChosenMove == MOVE_BATON_PASS || gBattleMoves[gChosenMove].effect == EFFECT_HIT_ESCAPE)
+                if ((gChosenMove == MOVE_BATON_PASS || gBattleMoves[gChosenMove].effect == EFFECT_HIT_ESCAPE)//required otherwise choice state may carry over to other u-turn user
                     && !(gMoveResultFlags & MOVE_RESULT_FAILED))
                 {
                     gBattleScripting.moveendState++;

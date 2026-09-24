@@ -95,7 +95,16 @@ Several existing encounters were reduced from 5% to 4% to make room.
 
 ### Mt Pyre 
 
-Slight changes to top floor and outside peak encounters.
+- Slight changes to top floor and outside peak encounters.
+
+### Mirage Island
+
+- Get to the island the RNG way or use Mew (have it in your party when you check with the old man)
+- New 5% encounters: 
+	- *REDACTED*
+	- *REDACTED* 
+	- *REDACTED*
+	- *REDACTED*
 
 ### Night Encounters 
 - I have not explicitly documented night encounters. You can always check the wild encounters JSON. (A little mystery is healthy) 
@@ -296,6 +305,35 @@ Available on:
 - Sableye
   -Taunt/Torment/Will O Wisp/Recover
 
+## Modern Emerald Move Additions upstream from resetes12
+
+### BLOOD MOON
+- Modified to cause torment to user instead of hyper beam effect
+- 140 bp 100 acc move
+- This makes it less of a hyper beam clone and you can actually use moves in between
+- torment lasts until user switched out (normal behavior)
+
+### FREEZING GLARE
+- same as modern emerald 3.6 (resetes12)
+- 90 bp psy 20% freeze chance
+
+###  THUNDEROUS KICK
+- same as modern emerald 3.6 (resetes12)
+-90bp 100% def down
+
+### FIERY WRATH
+- modified from modern emerald 3.6 (resetes12)
+- 90bp 
+- 30% flinch chance (up from 20%)
+- wanted less overlap with dark pulse
+
+### SEARING SHOT
+- same as modern emerald 3.6 (resetes12)
+
+### JUDGMENT (resetes12)
+- this version was not added
+- The animation is still in the game (its more gen 4 accurate)
+- currently using my (custom) move version and animation
 ---
 
 ## Ability Changes
@@ -461,6 +499,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Hitmontop
   - Deoxys-A
   - Beedrill
+  - *REDACTED*
 
 **Iron Fist**
 - 1.2× boost to punching moves.
@@ -487,6 +526,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Farigiraf
   - Deoxys-D
   - Houndoom
+  - *REDACTED*
 
 **Sharpness**
 - 1.2× boost to slicing moves.
@@ -530,6 +570,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Horsea
   - Octillery
   - Remoraid
+  - *REDACTED*
 
 **Defiant**
 - Gives 1 Attack stat stage instead of 2 (made it immune to intimidate for this reason)
@@ -542,6 +583,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Poochyena
   - Vigoroth
   - Regigigas (also got Guts)
+  - *REDACTED*
 
 **Rivalry**
 - 1.25× damage vs same-gender opponents.
@@ -556,6 +598,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 **Run Away** 
 - Electivire gets reworked Run Away as it is closer to Motor Drive/Rattled. 
 - Clamperl (also got reworked modern rapid spin as egg move -> +1 speed )
+- *REDACTED*
 
 **Legend Plate**
 - Arceus gets second ability
@@ -590,10 +633,10 @@ These abilities change move typing only and do not add extra damage boosts.
 - Scizor
 - Registeel
 
-I wanted a simple way to modernize Scizor in a Gen 3 ecosystem. Example moveset options: (STEEL) Quick Attack, U-Turn, Swords Dance, (STEEL) Body Slam (para chance), and (BUG) ViceGrip (50% def down chance).
+I wanted a simple way to modernize Scizor in a Gen 3. Example moveset options: (STEEL) Quick Attack, U-Turn, Swords Dance, (STEEL) Body Slam (para chance), and (BUG) ViceGrip (50% def down chance).
 
 Additional Scizor changes:
-- Lost Double-Edge via tutor 
+- Lost Double-Edge via tutor (get it with scyther or debug menu) 
 - Gained Body Slam via tutor
 - Gained Mega Kick via tutor
 
@@ -601,6 +644,9 @@ Additional Scizor changes:
 - Normal-type moves become Ghost-type
 - Bloodmoon Ursaluna
 - Typhlosion
+
+I changed Mind's Eye to go with the rework of Ursaluna Bloodmoon (Ground/Ghost). I wanted to make the two ursaluna evos feel different Ground/Normal vs Ground/Ghost. Ursaluna Bloodmoon still hits Ghost types with Normal moves using Mind's Eye. It has reworked Insomnia as a second ability so it can get reduced dark damage (0.5x) multiplier removing a weakness. BloodMoon is still a strong move with both abilities (140bp). 
+
 
 NOTE: Silk Scarf still gives a 1.2× hold boost to type changed moves.
 A workaround was applied so correct hold items give the 1.2× boost to type changed normal moves.
@@ -754,6 +800,8 @@ NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost i
 
 **Bloodmoon Ursaluna**
 - Added as Ground/Ghost.
+- reworked to get modified minds eye (reworked to make normal moves ghost type)
+- can either use insomnia (removes dark weakness) or minds eye (normal moves turn ghost and gains STAB on them)
 
 **Pinsir**
 - Now Bug/Flying (Mega themed) 
