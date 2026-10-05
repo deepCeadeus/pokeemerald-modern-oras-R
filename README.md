@@ -261,14 +261,12 @@ Includes a custom animation compatible with Modern Emerald assets.
 - Hits twice
 
 ### Hyper Drill
-- 70 BP
-- New functionality: works like Smelling Salts.
-- Doubles damage against PAR targets and removes paralysis.
-- (Especially useful with Serene Grace Body Slam.)
+- 100 BP
+- Hits through Detect or Protect
 
 ### Rage Fist
 - 60 BP (Ghost)
-- Functions like normal Rage in Gen 3.
+- Functions like normal Rage in Gen 3. (+1 attack stage)
 - Stacks with Defiant until stat stages cap.
 
 ### Stone Axe
@@ -654,13 +652,15 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 ---
 
 ## Weather Abilities
-NOTE: **Hail update** -> Blizzard is accurate in Hail (Gen IV), Ice types get 1.5x Defense boost in Hail (Gen IX snowscape)
+
+**Hail update** -> Blizzard is accurate in Hail (Gen IV), Ice types get 1.5x Defense boost in Hail (Gen IX snowscape)
 - NEW: ICE types get boost 1.3x to ICE MOVES 
-**Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
-NOTE: **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
+- **Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
+
+**Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
 - NEW: STEEl types get boost 1.3x to STEEL MOVES
 - NEW: GROUND types get boost 1.3x to GROUND MOVES
-**Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
+- **Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 
 **Drizzle**
 - Wingull

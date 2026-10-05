@@ -1542,8 +1542,8 @@ static const u8 sRageFistDescription[] = _(
     "every time it is hit.");  
 
 static const u8 sHyperDrillDescription[] = _(
-    "Powerful against paralyzed\n"
-    "foes, but also cures them."); 
+    "A piercing drill attack.\n"
+    "Bypasses protect or detect."); 
 
 static const u8 sJudgmentDescription[] = _(
     "The effectiveness varies\n"
