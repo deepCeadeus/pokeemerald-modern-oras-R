@@ -948,6 +948,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_ROCK_SLIDE,
               MOVE_BITE,
+              MOVE_BOUNCE,
               MOVE_HEADBUTT,
               MOVE_ASTONISH,
               MOVE_CURSE),
