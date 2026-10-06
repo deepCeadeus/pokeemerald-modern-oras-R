@@ -5231,7 +5231,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_THUNDER_FANG] =
     {
-        .effect = EFFECT_PARALYZE_HIT,
+        .effect = EFFECT_FLINCH_HIT,
         .power = 65,
         .type = TYPE_ELECTRIC,
         .accuracy = 95,
@@ -5244,7 +5244,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_ICE_FANG] =
     {
-        .effect = EFFECT_FREEZE_HIT,
+        .effect = EFFECT_FLINCH_HIT,
         .power = 65,
         .type = TYPE_ICE,
         .accuracy = 95,
@@ -5257,7 +5257,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
     },
     [MOVE_FIRE_FANG] =
     {
-        .effect = EFFECT_BURN_HIT,
+        .effect = EFFECT_FLINCH_HIT,
         .power = 65,
         .type = TYPE_FIRE,
         .accuracy = 95,

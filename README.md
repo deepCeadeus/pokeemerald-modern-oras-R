@@ -180,11 +180,12 @@ Added:
 - **Night Slash**
 
 ### Fang Adjustments
-Because Gen IV flinch mechanics aren’t present:
-- Fire Fang: **20%** burn
-- Thunder Fang: **20%** paralysis
-- Ice Fang: **20%** freeze
-- They use the regular in game battle effects for status
+Because Gen IV dual effect (flinch + status)  mechanics aren’t present:
+- Fire Fang: **20%** flinch
+- Thunder Fang: **20%** flinch
+- Ice Fang: **20%** flinch
+- They use the regular in game flinch effects
+- I decided to lean into the bite move flinch theme instead of trying for 10% flinch + 10% status chance.
 ---
 
 ## Generation IV Move Additions
@@ -231,6 +232,8 @@ Tested in:
 - Battle Arena
 - Battle Tents
 
+Note: I set up the battle script to have a choice band exclusion because the way this engine works it would potentially carry the choice move effect to the next party member if they had u_turn or volt switch. Baton pass does the same. (I actually think this bug was also in later games->gen iv?) So this move is not effected by choice band if you pick it as the first move. This mainly impacts the battle arena where switching isnt allowed. 
+
 ### Sucker Punch
 - 70 BP
 - 100 accuracy
@@ -273,6 +276,7 @@ Includes a custom animation compatible with Modern Emerald assets.
 - Added as a **Rock-type** move.
 - **50 BP**, **90 accuracy**, hits twice.
 - This was reworked for stability instead of adding another mechanic to manage (stealth rock).
+- I figured a two hit attack has similar damage compared to the modern version that creates splinters
 - Available on:
   - **Kleavor**
   - **Kabutops**

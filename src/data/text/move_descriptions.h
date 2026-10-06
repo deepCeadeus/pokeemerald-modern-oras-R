@@ -1498,16 +1498,16 @@ static const u8 sHeadSmashDescription[] = _(
     "also hurts the user."); 
     
 static const u8 sThunderFangDescription[] = _(
-    "A sharp-fanged attack.\n"
-    "May paralyze the foe.");
+    "Bites with shocking fangs.\n"
+    "May cause flinching.");
     
 static const u8 sIceFangDescription[] = _(
-    "A sharp-fanged attack.\n"
-    "May freeze the foe."); 
+    "Bites with frozen fangs.\n"
+    "May cause flinching.");
 
 static const u8 sFireFangDescription[] = _(
-    "A sharp-fanged attack.\n"
-    "May burn the foe.");  
+    "Bites with fiery fangs.\n"
+    "May cause flinching.");  
 
 static const u8 sNightSlashDescription[] = _(
     "A dark opportunistic slash.\n"
