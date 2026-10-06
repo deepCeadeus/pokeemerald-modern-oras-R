@@ -18,6 +18,7 @@ static const u16 sBulbasaurLevelUpLearnset[] = {
 };
 
 static const u16 sIvysaurLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
     LEVEL_UP_MOVE( 1, MOVE_LEECH_SEED),
@@ -42,7 +43,7 @@ static const u16 sVenusaurLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ENDEAVOR),
     LEVEL_UP_MOVE( 1, MOVE_LEECH_SEED),
     LEVEL_UP_MOVE( 1, MOVE_KNOCK_OFF),
-    LEVEL_UP_MOVE( 4, MOVE_GROWL),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 7, MOVE_LEECH_SEED),
     LEVEL_UP_MOVE( 9, MOVE_VINE_WHIP),
     LEVEL_UP_MOVE(13, MOVE_POISON_POWDER),
@@ -814,6 +815,7 @@ static const u16 sGloomLevelUpLearnset[] = {
 static const u16 sVileplumeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_GROWTH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE( 1, MOVE_SLEEP_POWDER),
     LEVEL_UP_MOVE( 1, MOVE_AROMATHERAPY),
@@ -843,6 +845,7 @@ static const u16 sParasLevelUpLearnset[] = {
 
 static const u16 sParasectLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE( 1, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE( 7, MOVE_STUN_SPORE),
@@ -1294,6 +1297,7 @@ static const u16 sWeepinbellLevelUpLearnset[] = {
 };
 
 static const u16 sVictreebelLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_STOCKPILE),
     LEVEL_UP_MOVE( 1, MOVE_SWALLOW),
     LEVEL_UP_MOVE( 1, MOVE_SPIT_UP),
@@ -1894,6 +1898,7 @@ static const u16 sExeggcuteLevelUpLearnset[] = {
 };
 
 static const u16 sExeggutorLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_BARRAGE),
     LEVEL_UP_MOVE( 1, MOVE_PSYCHO_CUT),
     LEVEL_UP_MOVE( 1, MOVE_REFLECT),
@@ -3432,6 +3437,7 @@ static const u16 sAmpharosLevelUpLearnset[] = {
 static const u16 sBellossomLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_GROWTH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_LEAF_BLADE),
     LEVEL_UP_MOVE( 1, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE( 1, MOVE_SLEEP_POWDER),
@@ -3628,6 +3634,7 @@ static const u16 sSunkernLevelUpLearnset[] = {
 };
 
 static const u16 sSunfloraLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_SYNTHESIS),
@@ -4818,7 +4825,7 @@ static const u16 sCelebiLevelUpLearnset[] = {
     LEVEL_UP_MOVE(55, MOVE_SUCKER_PUNCH),
     LEVEL_UP_MOVE(60, MOVE_RAZOR_WIND),
     LEVEL_UP_MOVE(65, MOVE_LEAF_BLADE),
-    LEVEL_UP_MOVE(70, MOVE_GROWTH),
+    LEVEL_UP_MOVE(70, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE(75, MOVE_PETAL_DANCE),
     LEVEL_UP_MOVE(80, MOVE_EARTH_POWER),
     LEVEL_UP_MOVE(85, MOVE_FREEZING_GLARE),
@@ -5410,7 +5417,7 @@ static const u16 sShiftryLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_EXTRASENSORY),
     LEVEL_UP_MOVE( 1, MOVE_MEGA_DRAIN),
     LEVEL_UP_MOVE( 1, MOVE_SUNNY_DAY),
-    LEVEL_UP_MOVE( 1, MOVE_GROWTH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_NATURE_POWER),
     LEVEL_UP_MOVE( 1, MOVE_SUCKER_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_FAKE_OUT),
@@ -5544,7 +5551,7 @@ static const u16 sShroomishLevelUpLearnset[] = {
 };
 
 static const u16 sBreloomLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 1, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
     LEVEL_UP_MOVE( 1, MOVE_POISON_POWDER),
     LEVEL_UP_MOVE( 1, MOVE_STUN_SPORE),
@@ -6313,6 +6320,7 @@ static const u16 sCacturneLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_GROWTH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 5, MOVE_ABSORB),
     LEVEL_UP_MOVE( 9, MOVE_GROWTH),
     LEVEL_UP_MOVE(13, MOVE_LEECH_SEED),
@@ -6788,6 +6796,7 @@ static const u16 sTropiusLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_GUST),
     LEVEL_UP_MOVE( 1, MOVE_U_TURN),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 7, MOVE_GROWTH),
     LEVEL_UP_MOVE(11, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE(17, MOVE_STOMP),
@@ -8280,6 +8289,7 @@ static const u16 sRhyperiorLevelUpLearnset[] = {
 static const u16 sRoseradeLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),
     LEVEL_UP_MOVE( 1, MOVE_GROWTH),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_POISON_STING),
     LEVEL_UP_MOVE( 1, MOVE_STUN_SPORE),
     LEVEL_UP_MOVE( 1, MOVE_MEGA_DRAIN),
@@ -8318,6 +8328,7 @@ static const u16 sSylveonLevelUpLearnset[] = {
 };
 
 static const u16 sTangrowthLevelUpLearnset[] = {
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_INGRAIN),
     LEVEL_UP_MOVE( 1, MOVE_CONSTRICT),
     LEVEL_UP_MOVE( 5, MOVE_SLEEP_POWDER),

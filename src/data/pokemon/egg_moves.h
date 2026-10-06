@@ -153,6 +153,7 @@ const u16 gEggMoves[] = {
               MOVE_FLAIL,
               MOVE_SYNTHESIS,
               MOVE_CHARM,
+              MOVE_MODERN_GROWTH,
               MOVE_INGRAIN),
 
     egg_moves(PARAS,
@@ -165,6 +166,7 @@ const u16 gEggMoves[] = {
               MOVE_FLAIL,
               MOVE_SWEET_SCENT,
               MOVE_LIGHT_SCREEN,
+              MOVE_MODERN_GROWTH,
               MOVE_PURSUIT),
 
     egg_moves(VENONAT,
@@ -267,6 +269,7 @@ const u16 gEggMoves[] = {
               MOVE_LEECH_LIFE,
               MOVE_INGRAIN,
               MOVE_WEATHER_BALL,
+              MOVE_MODERN_GROWTH,
               MOVE_MAGICAL_LEAF),
 
     egg_moves(TENTACOOL,
@@ -416,6 +419,7 @@ const u16 gEggMoves[] = {
               MOVE_ANCIENT_POWER,
               MOVE_PSYCH_UP,
               MOVE_INGRAIN,
+              MOVE_MODERN_GROWTH,
               MOVE_CURSE),
 
     egg_moves(CUBONE,
@@ -676,6 +680,7 @@ const u16 gEggMoves[] = {
               MOVE_GRASS_WHISTLE,
               MOVE_EARTH_POWER,
               MOVE_WEATHER_BALL,
+              MOVE_MODERN_GROWTH,
               MOVE_FIRE_SPIN),
 
     egg_moves(CYNDAQUIL,
@@ -874,6 +879,7 @@ const u16 gEggMoves[] = {
               MOVE_LEECH_SEED,
               MOVE_NATURE_POWER,
               MOVE_CURSE,
+              MOVE_MODERN_GROWTH,
               MOVE_HELPING_HAND),
 
     egg_moves(YANMA,
@@ -1209,6 +1215,7 @@ const u16 gEggMoves[] = {
               MOVE_OUTRAGE,
               MOVE_DARK_PULSE,
               MOVE_PETAL_DANCE,
+              MOVE_MODERN_GROWTH,
               MOVE_CRUSH_CLAW),
 
     egg_moves(TORCHIC,
@@ -1271,6 +1278,7 @@ const u16 gEggMoves[] = {
               MOVE_QUICK_ATTACK,
               MOVE_RAZOR_WIND,
               MOVE_TAKE_DOWN,
+              MOVE_MODERN_GROWTH,
               MOVE_FALSE_SWIPE),
 
     egg_moves(NINCADA,
@@ -1294,6 +1302,7 @@ const u16 gEggMoves[] = {
               MOVE_SWAGGER,
               MOVE_CHARM,
               MOVE_FALSE_SWIPE,
+              MOVE_MODERN_GROWTH,
               MOVE_HELPING_HAND),
 
     egg_moves(SPINDA,
@@ -1488,6 +1497,7 @@ const u16 gEggMoves[] = {
               MOVE_SMELLING_SALT,
               MOVE_TEETER_DANCE,
               MOVE_DYNAMIC_PUNCH,
+              MOVE_MODERN_GROWTH,
               MOVE_COUNTER),
 
     egg_moves(SNORUNT,
@@ -1570,6 +1580,7 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_POWDER,
               MOVE_SPIKES,
               MOVE_SYNTHESIS,
+              MOVE_MODERN_GROWTH,
               MOVE_RAZOR_LEAF),
 
     egg_moves(ROSELIA,
@@ -1580,6 +1591,7 @@ const u16 gEggMoves[] = {
               MOVE_SLEEP_POWDER,
               MOVE_SPIKES,
               MOVE_SYNTHESIS,
+              MOVE_MODERN_GROWTH,
               MOVE_RAZOR_LEAF),
 
     egg_moves(SLAKOTH,
@@ -1707,6 +1719,7 @@ const u16 gEggMoves[] = {
               MOVE_BUG_BUZZ,
               MOVE_ENCORE,
               MOVE_SILVER_WIND,
+              MOVE_MODERN_GROWTH,
               MOVE_GROWTH),
 
     egg_moves(LILEEP,

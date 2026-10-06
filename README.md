@@ -288,6 +288,15 @@ Includes a custom animation compatible with Modern Emerald assets.
 - Replaces Stone Edge on many Pokémon.
 - Toned down to fill the niche of both stone edge and headsmash.
 
+### Growth (Modern)
+- added as a separate move to preserve frontier teams
+- added as additional modern egg pool and re-learn move
+- boosts sp atk and atk
+- is a grass type move
+- custom script like calm mind
+- I did this to preserve the way the AI functions with the pre-made teams until I examine all the AI scripts and decide to simplify things
+
+
 ---
 
 ## Hidden Priority Moves (Prankster-Style)
