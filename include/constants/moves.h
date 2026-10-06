@@ -394,7 +394,8 @@
 #define MOVE_THUNDEROUS_KICK 390
 #define MOVE_FIERY_WRATH 391
 #define MOVE_SEARING_SHOT 392
-#define MOVES_COUNT 393
+#define MOVE_MODERN_GROWTH 393
+#define MOVES_COUNT 394
 
 // Used for checks for moves affected by Disable, Mimic, etc.
 #define MOVE_UNAVAILABLE 0xFFFF

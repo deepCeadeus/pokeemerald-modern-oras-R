@@ -393,4 +393,5 @@ const u8 gMoveNames[MOVES_COUNT][MOVE_NAME_LENGTH + 1] =
     [MOVE_THUNDEROUS_KICK] = _("Thund. Kick"),
     [MOVE_FIERY_WRATH] = _("Fiery Wrath"),
     [MOVE_SEARING_SHOT] = _("Searing Shot"),
+    [MOVE_MODERN_GROWTH] = _("Growth"),
 };

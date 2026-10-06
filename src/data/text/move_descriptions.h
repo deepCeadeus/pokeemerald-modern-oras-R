@@ -1568,6 +1568,10 @@ static const u8 sFieryWrathDescription[] = _(
 static const u8 sSearingShotDescription[] = _(
     "Scarlet flames torch\n"
     "everything around the user.");
+    
+static const u8 sModernGrowthDescription[] = _(
+    "Raises Sp. Atk and Atk\n"
+    "by forcing growth.");    
 
 
 // MOVE_NONE is ignored in this table. Make sure to always subtract 1 before getting the right pointer.
@@ -1965,4 +1969,5 @@ const u8 *const gMoveDescriptionPointers[MOVES_COUNT - 1] =
     [MOVE_THUNDEROUS_KICK - 1] = sThunderousKickDescription,
     [MOVE_FIERY_WRATH - 1] = sFieryWrathDescription,
     [MOVE_SEARING_SHOT - 1] = sSearingShotDescription,
+    [MOVE_MODERN_GROWTH - 1] = sModernGrowthDescription,
 };

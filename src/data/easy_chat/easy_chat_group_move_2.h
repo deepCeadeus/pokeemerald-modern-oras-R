@@ -239,4 +239,5 @@ const u16 gEasyChatGroup_Move2[] = {
     MOVE_THUNDEROUS_KICK,
     MOVE_FIERY_WRATH,
     MOVE_SEARING_SHOT,
+    MOVE_MODERN_GROWTH,
 };

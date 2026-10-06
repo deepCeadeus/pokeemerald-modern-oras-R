@@ -965,6 +965,7 @@ static const bool8 sValidApprenticeMoves[MOVES_COUNT] =
     [MOVE_THUNDEROUS_KICK] = FALSE,
     [MOVE_FIERY_WRATH] = FALSE,
     [MOVE_SEARING_SHOT] = FALSE,
+    [MOVE_MODERN_GROWTH] = TRUE,
 };
 
 // The possible questions to ask after the initial 3 WHICH MON questions. Retrieved from here and shuffled

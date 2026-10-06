@@ -409,6 +409,7 @@ gBattleAnims_Moves::
     	.4byte Move_THUNDEROUS_KICK
     	.4byte Move_FIERY_WRATH
     	.4byte Move_SEARING_SHOT
+    	.4byte Move_MODERN_GROWTH
 	.4byte Move_COUNT @ cannot be reached, because last move is Psycho Boost
 
 	.align 2
@@ -12245,4 +12246,16 @@ Move_SEARING_SHOT::
 	clearmonbg ANIM_ATK_PARTNER
 	blendoff
 	end
+
+Move_MODERN_GROWTH:
+	call ModernGrowthEffect
+	waitforvisualfinish
+	call ModernGrowthEffect
+	waitforvisualfinish
+	end
+ModernGrowthEffect:
+	createvisualtask AnimTask_BlendColorCycle, 2, F_PAL_ATTACKER, 0, 2, 0, 8, RGB_WHITE
+	playsewithpan SE_M_TAKE_DOWN, SOUND_PAN_ATTACKER
+	createvisualtask AnimTask_ScaleMonAndRestore, 5, -3, -3, 16, ANIM_ATTACKER, 0
+	return
 

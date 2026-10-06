@@ -3098,6 +3098,13 @@ const struct ContestMove gContestMoves[MOVES_COUNT] =
         .comboStarterId = 0,
         .comboMoves = {0},
     },
+    [MOVE_MODERN_GROWTH] =
+    {
+        .effect = CONTEST_EFFECT_IMPROVE_CONDITION_PREVENT_NERVOUSNESS,
+        .contestCategory = CONTEST_CATEGORY_BEAUTY,
+        .comboStarterId = COMBO_STARTER_GROWTH,
+        .comboMoves = {0},
+    },
 };
 
 const struct ContestEffect gContestEffects[] =
