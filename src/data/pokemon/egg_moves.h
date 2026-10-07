@@ -474,6 +474,7 @@ const u16 gEggMoves[] = {
               MOVE_METRONOME,
               MOVE_HEAL_BELL,
               MOVE_AROMATHERAPY,
+              MOVE_WISH,
               MOVE_SUBSTITUTE),
 
     egg_moves(CHANSEY,
@@ -483,6 +484,7 @@ const u16 gEggMoves[] = {
               MOVE_METRONOME,
               MOVE_HEAL_BELL,
               MOVE_AROMATHERAPY,
+              MOVE_WISH,
               MOVE_SUBSTITUTE),
 
     egg_moves(TANGELA,
@@ -708,6 +710,7 @@ const u16 gEggMoves[] = {
               MOVE_DRAGON_DANCE,
               MOVE_ICE_PUNCH,
               MOVE_METAL_CLAW,
+              MOVE_OUTRAGE,
               MOVE_DRAGON_CLAW),
 
     egg_moves(SENTRET,
