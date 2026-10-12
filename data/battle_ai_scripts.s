@@ -211,6 +211,10 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
+	if_effect EFFECT_RECOIL, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_DOUBLE_EDGE, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_RECOIL_IF_MISS, AI_CBM_HighRiskForDamage
+	if_effect EFFECT_GROWTH, AI_CBM_Growth
 	end
 
 AI_CBM_Sleep:
@@ -597,6 +601,12 @@ AI_CBM_DragonDance:
 	if_stat_level_equal AI_USER, STAT_SPEED, MAX_STAT_STAGE, Score_Minus8
 	end
 
+AI_CBM_Growth:
+	if_stat_level_equal AI_USER, STAT_SPATK, MAX_STAT_STAGE, Score_Minus10
+	if_stat_level_equal AI_USER, STAT_ATK, MAX_STAT_STAGE, Score_Minus8
+	end
+
+
 Score_Minus1:
 	score -1
 	end
@@ -773,6 +783,9 @@ AI_CheckViability:
 	if_effect EFFECT_WATER_SPORT, AI_CV_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CV_SpDefUp
 	if_effect EFFECT_DRAGON_DANCE, AI_CV_DragonDance
+	if_effect EFFECT_SUCKER_PUNCH, AI_CV_SuckerPunch
+	if_effect EFFECT_HIT_ESCAPE, AI_CV_HitEscape
+	if_effect EFFECT_GROWTH, AI_CV_SpAtkUp //only checks SpAtk for simplicity 
 	end
 
 AI_CV_Sleep:
@@ -2589,6 +2602,47 @@ AI_CV_DragonDance2:
 AI_CV_DragonDance_End:
 	end
 
+AI_CV_SuckerPunch:
+	if_target_faster AI_CV_SuckerPunch_ScoreUp
+	if_hp_less_than AI_USER, 50, AI_CV_SuckerPunch_ScoreUp
+	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_SuckerPunch_ScoreDown
+	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_SuckerPunch_ScoreDown
+	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_SuckerPunch_ScoreDown
+	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_SuckerPunch_ScoreDown
+	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_SuckerPunch_ScoreDown
+	if_target_taunted AI_CV_SuckerPunch_ScoreUp2
+	goto AI_CV_SuckerPunch_End
+
+AI_CV_SuckerPunch_ScoreUp:
+	if_random_less_than 128, AI_CV_SuckerPunch_End
+	score +1
+AI_CV_SuckerPunch_ScoreUp2:
+	score +2
+AI_CV_SuckerPunch_ScoreDown:
+	score -1
+AI_CV_SuckerPunch_End:
+	end
+
+AI_CV_HitEscape:
+	if_status AI_USER, STATUS1_ANY, AI_CV_HitEscape_ScoreUp
+	if_hp_less_than AI_TARGET, 50, AI_CV_HitEscape_ScoreUp2
+	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_HitEscape_ScoreDown
+	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_HitEscape_ScoreDown
+	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_HitEscape_ScoreDown
+	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_HitEscape_ScoreDown
+	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_HitEscape_ScoreDown
+	goto AI_CV_HitEscapeEnd
+AI_CV_HitEscape_ScoreUp:
+	if_random_less_than 128, AI_CV_HitEscapeEnd
+	score +1
+AI_CV_HitEscape_ScoreUp2:
+	if_random_less_than 128, AI_CV_HitEscapeEnd
+	score +2	
+AI_CV_HitEscape_ScoreDown:
+	score -1
+AI_CV_HitEscapeEnd:	
+	end
+
 AI_TryToFaint:
 	if_target_is_ally AI_Ret
 	if_can_faint AI_TryToFaint_TryToEncourageQuickAttack
@@ -2678,6 +2732,7 @@ AI_SetupFirstTurn_SetupEffectsToEncourage:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_CAMOUFLAGE
+	.byte EFFECT_GROWTH
 	.byte -1
 
 @ ~60% chance to prefer moves that do 0 or 1 damage, or are in sIgnoredPowerfulMoveEffects
@@ -3011,6 +3066,7 @@ AI_HPAware_DiscouragedEffectsWhenMediumHP:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_DRAGON_DANCE
+	.byte EFFECT_GROWTH
 	.byte -1
 
 AI_HPAware_DiscouragedEffectsWhenLowHP:
@@ -3061,6 +3117,7 @@ AI_HPAware_DiscouragedEffectsWhenLowHP:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_DRAGON_DANCE
+	.byte EFFECT_GROWTH
 	.byte -1
 
 AI_HPAware_DiscouragedEffectsWhenTargetHighHP:
@@ -3106,6 +3163,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetMediumHP:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_DRAGON_DANCE
+	.byte EFFECT_GROWTH
 	.byte -1
 
 AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
@@ -3168,6 +3226,7 @@ AI_HPAware_DiscouragedEffectsWhenTargetLowHP:
 	.byte EFFECT_BULK_UP
 	.byte EFFECT_CALM_MIND
 	.byte EFFECT_DRAGON_DANCE
+	.byte EFFECT_GROWTH
 	.byte -1
 
 @ Given the AI_TryOnAlly at the beginning it's possible that this was the start of a more

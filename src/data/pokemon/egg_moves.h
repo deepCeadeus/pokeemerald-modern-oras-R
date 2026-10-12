@@ -997,6 +997,8 @@ const u16 gEggMoves[] = {
               MOVE_MUD_SLAP,
               MOVE_KNOCK_OFF,
               MOVE_SAND_TOMB,
+              MOVE_EARTH_POWER,
+              MOVE_SILVER_WIND,
               MOVE_HELPING_HAND),
 
     egg_moves(HERACROSS,
