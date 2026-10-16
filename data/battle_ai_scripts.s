@@ -211,9 +211,6 @@ AI_CheckBadMove_CheckEffect:
 	if_effect EFFECT_WATER_SPORT, AI_CBM_WaterSport
 	if_effect EFFECT_CALM_MIND, AI_CBM_CalmMind
 	if_effect EFFECT_DRAGON_DANCE, AI_CBM_DragonDance
-	if_effect EFFECT_RECOIL, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_DOUBLE_EDGE, AI_CBM_HighRiskForDamage
-	if_effect EFFECT_RECOIL_IF_MISS, AI_CBM_HighRiskForDamage
 	if_effect EFFECT_GROWTH, AI_CBM_Growth
 	end
 
@@ -786,6 +783,9 @@ AI_CheckViability:
 	if_effect EFFECT_SUCKER_PUNCH, AI_CV_SuckerPunch
 	if_effect EFFECT_HIT_ESCAPE, AI_CV_HitEscape
 	if_effect EFFECT_GROWTH, AI_CV_SpAtkUp //only checks SpAtk for simplicity 
+	if_effect EFFECT_RECOIL, AI_CV_HighRiskForDamage
+	if_effect EFFECT_DOUBLE_EDGE, AI_CV_HighRiskForDamage
+	if_effect EFFECT_RECOIL_IF_MISS, AI_CV_HighRiskForDamage
 	end
 
 AI_CV_Sleep:
@@ -2643,6 +2643,34 @@ AI_CV_HitEscape_ScoreDown:
 AI_CV_HitEscapeEnd:	
 	end
 
+AI_CV_HighRiskForDamage:
+	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
+	get_ability AI_TARGET
+	if_not_equal ABILITY_WONDER_GUARD, AI_CV_HighRiskForDamage_End
+	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CV_HighRiskForDamage_End
+	get_ability AI_USER
+	if_equal ABILITY_RECKLESS, AI_CV_HighRiskForDamage_Reckless
+	goto Score_Minus10
+
+AI_CV_HighRiskForDamage_End:
+	end
+
+AI_CV_HighRiskForDamage_Reckless:	
+	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_RecklessMaybe
+	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_RecklessMaybe
+	if_type_effectiveness AI_EFFECTIVENESS_x1, AI_CV_RecklessTry
+	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CV_RecklessTry
+	if_type_effectiveness AI_EFFECTIVENESS_x4, AI_CV_RecklessTry
+	goto AI_CV_HighRiskForDamage_End
+
+AI_CV_RecklessMaybe:
+	if_random_less_than 50, AI_CV_HighRiskForDamage_End
+	score -3
+
+AI_CV_RecklessTry:	
+	if_random_less_than 50, AI_CV_HighRiskForDamage_End
+	score +1
+	
 AI_TryToFaint:
 	if_target_is_ally AI_Ret
 	if_can_faint AI_TryToFaint_TryToEncourageQuickAttack
