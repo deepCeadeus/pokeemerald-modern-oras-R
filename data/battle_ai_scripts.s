@@ -2645,15 +2645,9 @@ AI_CV_HitEscapeEnd:
 
 AI_CV_HighRiskForDamage:
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
-	get_ability AI_TARGET
-	if_not_equal ABILITY_WONDER_GUARD, AI_CV_HighRiskForDamage_End
-	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CV_HighRiskForDamage_End
 	get_ability AI_USER
 	if_equal ABILITY_RECKLESS, AI_CV_HighRiskForDamage_Reckless
-	goto Score_Minus10
-
-AI_CV_HighRiskForDamage_End:
-	end
+	goto AI_CV_HighRiskForDamage_End
 
 AI_CV_HighRiskForDamage_Reckless:	
 	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_RecklessMaybe
@@ -2670,6 +2664,9 @@ AI_CV_RecklessMaybe:
 AI_CV_RecklessTry:	
 	if_random_less_than 50, AI_CV_HighRiskForDamage_End
 	score +1
+	
+AI_CV_HighRiskForDamage_End:
+	end	
 	
 AI_TryToFaint:
 	if_target_is_ally AI_Ret
