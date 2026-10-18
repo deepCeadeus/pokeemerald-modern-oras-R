@@ -82,23 +82,18 @@ Several existing encounters were reduced from 5% to 4% to make room.
 - Added at 1% encounter rate
 
 ### Route 119
-
 - Added some new encounters (less oddish) 
 
 ### Ocean Routes 
-
 - Slight changes to make Surf encounters more interesting. 
 
 ### Meteor Falls
-
 - Surf and Fishing encounters updated
 
 ### Mt Pyre 
-
 - Slight changes to top floor and outside peak encounters.
 
 ### Mirage Island
-
 - Get to the island the RNG way or use Mew (have it in your party when you check with the old man)
 - New 5% encounters: 
 	- *REDACTED*
@@ -117,6 +112,32 @@ Several existing encounters were reduced from 5% to 4% to make room.
 - **Safari Zone**: Starters and evos are more present
 - **Jagged Pass** and **Fiery Path** have night encounters 
  
+---
+
+## Frontier Changes
+
+### Toxic/DoubleTeam Spam
+- The major toxic/double team spam encounters have been replaced (Shuckle, Dusclops, Chansey)
+	- examples:
+		- Dusclops: MOVE_TOXIC, MOVE_NIGHT_SHADE, MOVE_REST, MOVE_DYNAMIC_PUNCH
+		- Chansey: MOVE_WISH, MOVE_METRONOME, MOVE_DYNAMIC_PUNCH, MOVE_SING
+		- Shuckle: MOVE_CURSE, MOVE_HEAD_SMASH, MOVE_WRAP, MOVE_REST
+		- Most Shuckle encounters were reworked
+	- The goal was to reduce encounters that could end up as a RNG fight.
+
+### Encounters
+- Some encounters have small updates to moves
+	- You may see Head Smash, Sucker Punch, U-Turn, Volt Switch, Ice Fang and more.
+	- Added AI script handling for these new move battlescripts.
+
+- Some encounters have been completely reworked for the new movesets
+	- Mainly Gen IV+ encounters
+	- examples: 
+		- Dudunsparce: MOVE_BULK_UP, MOVE_HYPER_DRILL, MOVE_POISON_JAB, MOVE_ROOST
+		- Wyrdeer: MOVE_BARRIER_RUSH, MOVE_STOMP, MOVE_HYPNOSIS, MOVE_LIGHT_SCREEN
+		- Annihilape: MOVE_BULK_UP, MOVE_CROSS_CHOP, MOVE_TAUNT, MOVE_RAGE_FIST
+		- Sudowoodo: MOVE_HEAD_SMASH, MOVE_SUCKER_PUNCH, MOVE_SANDSTORM, MOVE_BLOCK
+
 ---
 
 ## Move Changes
@@ -168,6 +189,7 @@ Several existing encounters were reduced from 5% to 4% to make room.
 - **Razor Wind:** restored increased critical-hit ratio
 - **Needle Arm:** 70 BP
 - **Bullet Seed:** 25 BP (Modernized)
+- **Dynamic Punch:** 5pp increased to 10pp
 
 ---
 
