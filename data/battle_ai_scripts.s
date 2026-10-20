@@ -397,6 +397,10 @@ AI_CBM_Reflect:
 
 AI_CBM_Paralyze:
 	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
+	get_target_type1
+	if_equal TYPE_ELECTRIC, Score_Minus10
+	get_target_type2
+	if_equal TYPE_ELECTRIC, Score_Minus10
 	get_ability AI_TARGET
 	if_equal ABILITY_LIMBER, Score_Minus10
 	if_status AI_TARGET, STATUS1_ANY, Score_Minus10
@@ -2603,70 +2607,143 @@ AI_CV_DragonDance_End:
 	end
 
 AI_CV_SuckerPunch:
-	if_target_faster AI_CV_SuckerPunch_ScoreUp
-	if_hp_less_than AI_USER, 50, AI_CV_SuckerPunch_ScoreUp
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_SuckerPunch_ScoreDown
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_SuckerPunch_ScoreDown
-	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_SuckerPunch_ScoreDown
-	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_SuckerPunch_ScoreDown
-	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_SuckerPunch_ScoreDown
-	if_target_taunted AI_CV_SuckerPunch_ScoreUp2
-	goto AI_CV_SuckerPunch_End
+    	if_target_faster AI_CV_SuckerPunch_Faster
+    	goto AI_CV_SuckerPunch_CheckHP
 
-AI_CV_SuckerPunch_ScoreUp:
-	if_random_less_than 128, AI_CV_SuckerPunch_End
-	score +1
-AI_CV_SuckerPunch_ScoreUp2:
-	score +2
-AI_CV_SuckerPunch_ScoreDown:
-	score -1
+AI_CV_SuckerPunch_Faster:
+    	if_random_less_than 128, AI_CV_SuckerPunch_CheckHP
+    	score +1
+    	goto AI_CV_SuckerPunch_CheckHP
+
+AI_CV_SuckerPunch_CheckHP:
+    	if_hp_less_than AI_USER, 50, AI_CV_SuckerPunch_LowHP
+    	goto AI_CV_SuckerPunch_CheckTaunt
+
+AI_CV_SuckerPunch_LowHP:
+    	score +1
+    	goto AI_CV_SuckerPunch_CheckTaunt
+
+AI_CV_SuckerPunch_CheckTaunt:
+    	if_target_taunted AI_CV_SuckerPunch_Taunted
+    	goto AI_CV_SuckerPunch_CheckEffectiveness
+
+AI_CV_SuckerPunch_Taunted:
+    	score +2
+    	goto AI_CV_SuckerPunch_CheckEffectiveness
+
+AI_CV_SuckerPunch_CheckEffectiveness:
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_SuckerPunch_EffectivenessDown
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_SuckerPunch_EffectivenessDown
+    	goto AI_CV_SuckerPunch_CheckSleep
+
+AI_CV_SuckerPunch_EffectivenessDown:
+    	score -1
+    	goto AI_CV_SuckerPunch_CheckSleep
+
+AI_CV_SuckerPunch_CheckSleep:
+    	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_SuckerPunch_SleepDown
+    	goto AI_CV_SuckerPunch_CheckInfatuation
+
+AI_CV_SuckerPunch_SleepDown:
+    	score -2
+    	goto AI_CV_SuckerPunch_CheckInfatuation
+
+AI_CV_SuckerPunch_CheckInfatuation:
+    	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_SuckerPunch_InfatuationDown
+    	goto AI_CV_SuckerPunch_CheckConfusion
+
+AI_CV_SuckerPunch_InfatuationDown:
+    	score -2
+    	goto AI_CV_SuckerPunch_CheckConfusion
+
+AI_CV_SuckerPunch_CheckConfusion:
+    	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_SuckerPunch_ConfusionDown
+    	goto AI_CV_SuckerPunch_End
+
+AI_CV_SuckerPunch_ConfusionDown:
+    	score -2
+
 AI_CV_SuckerPunch_End:
-	end
+    	end
 
 AI_CV_HitEscape:
-	if_status AI_USER, STATUS1_ANY, AI_CV_HitEscape_ScoreUp
-	if_hp_less_than AI_TARGET, 50, AI_CV_HitEscape_ScoreUp2
-	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_HitEscape_ScoreDown
-	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_HitEscape_ScoreDown
-	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_HitEscape_ScoreDown
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_HitEscape_ScoreDown
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_HitEscape_ScoreDown
-	goto AI_CV_HitEscapeEnd
+    	if_status AI_USER, STATUS1_ANY, AI_CV_HitEscape_ScoreUp
+    	goto AI_CV_HitEscape_CheckHP
+
 AI_CV_HitEscape_ScoreUp:
-	if_random_less_than 128, AI_CV_HitEscapeEnd
-	score +1
+    	if_random_less_than 128, AI_CV_HitEscape_CheckHP
+    	score +1
+    	goto AI_CV_HitEscape_CheckHP
+
+AI_CV_HitEscape_CheckHP:
+    	if_hp_less_than AI_TARGET, 50, AI_CV_HitEscape_ScoreUp2
+    	goto AI_CV_HitEscape_CheckEffectiveness
+
 AI_CV_HitEscape_ScoreUp2:
-	if_random_less_than 128, AI_CV_HitEscapeEnd
-	score +2	
-AI_CV_HitEscape_ScoreDown:
-	score -1
-AI_CV_HitEscapeEnd:	
-	end
+    	if_random_less_than 128, AI_CV_HitEscape_CheckEffectiveness
+    	score +2
+    	goto AI_CV_HitEscape_CheckEffectiveness
+
+AI_CV_HitEscape_CheckEffectiveness:
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_HitEscape_EffectivenessDown
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_HitEscape_EffectivenessDown
+    	goto AI_CV_HitEscape_CheckSleep
+
+AI_CV_HitEscape_EffectivenessDown:
+    	score -1
+    	goto AI_CV_HitEscape_CheckSleep
+
+AI_CV_HitEscape_CheckSleep:
+    	if_status AI_TARGET, STATUS1_SLEEP, AI_CV_HitEscape_SleepDown
+    	goto AI_CV_HitEscape_CheckInfatuation
+
+AI_CV_HitEscape_SleepDown:
+    	score -2
+    	goto AI_CV_HitEscape_CheckInfatuation
+
+AI_CV_HitEscape_CheckInfatuation:
+    	if_status2 AI_TARGET, STATUS2_INFATUATION, AI_CV_HitEscape_InfatuationDown
+    	goto AI_CV_HitEscape_CheckConfusion
+
+AI_CV_HitEscape_InfatuationDown:
+    	score -2
+    	goto AI_CV_HitEscape_CheckConfusion
+
+AI_CV_HitEscape_CheckConfusion:
+    	if_status2 AI_TARGET, STATUS2_CONFUSION, AI_CV_HitEscape_ConfusionDown
+    	goto AI_CV_HitEscapeEnd
+
+AI_CV_HitEscape_ConfusionDown:
+    	score -2
+
+AI_CV_HitEscapeEnd:
+    	end
 
 AI_CV_HighRiskForDamage:
-	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
-	get_ability AI_USER
-	if_equal ABILITY_RECKLESS, AI_CV_HighRiskForDamage_Reckless
-	goto AI_CV_HighRiskForDamage_End
+    	if_type_effectiveness AI_EFFECTIVENESS_x0, Score_Minus10
+    	get_ability AI_USER
+    	if_equal ABILITY_RECKLESS, AI_CV_HighRiskForDamage_Reckless
+    	goto AI_CV_HighRiskForDamage_End
 
-AI_CV_HighRiskForDamage_Reckless:	
-	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_RecklessMaybe
-	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_RecklessMaybe
-	if_type_effectiveness AI_EFFECTIVENESS_x1, AI_CV_RecklessTry
-	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CV_RecklessTry
-	if_type_effectiveness AI_EFFECTIVENESS_x4, AI_CV_RecklessTry
-	goto AI_CV_HighRiskForDamage_End
+AI_CV_HighRiskForDamage_Reckless:
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_25, AI_CV_RecklessMaybe
+    	if_type_effectiveness AI_EFFECTIVENESS_x0_5, AI_CV_RecklessMaybe
+    	if_type_effectiveness AI_EFFECTIVENESS_x1, AI_CV_RecklessTry
+    	if_type_effectiveness AI_EFFECTIVENESS_x2, AI_CV_RecklessTry
+    	if_type_effectiveness AI_EFFECTIVENESS_x4, AI_CV_RecklessTry
+    	goto AI_CV_HighRiskForDamage_End
 
 AI_CV_RecklessMaybe:
-	if_random_less_than 50, AI_CV_HighRiskForDamage_End
-	score -3
+    	if_random_less_than 50, AI_CV_HighRiskForDamage_End
+    	score -3
+    	goto AI_CV_HighRiskForDamage_End
 
-AI_CV_RecklessTry:	
-	if_random_less_than 50, AI_CV_HighRiskForDamage_End
-	score +1
-	
+AI_CV_RecklessTry:
+    	if_random_less_than 128, AI_CV_HighRiskForDamage_End
+    	score +1
+
 AI_CV_HighRiskForDamage_End:
-	end	
+    	end
 	
 AI_TryToFaint:
 	if_target_is_ally AI_Ret
