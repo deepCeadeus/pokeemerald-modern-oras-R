@@ -378,11 +378,14 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 ### Ability Reworks & Buffs
 
 **LightningRod**
-- Works like Speed Boost for Sp. Atk. 
-- Conditional to require Rain for boosts to trigger.
+- Works only in Rain and has a Percent Chance to trigger stat boost.
+- If Special Attack is DOWN or has NO BOOST its 50% chance for boost to trigger end of turn in rain.
+- If Sp. Atk. is above +1 stage it has a 33% chance for a boost
 - Sceptile and Manectric benefit on rain teams.
 - Retains Electric Redirection in doubles.
 - No Electric Immunity added (Standard gen 3 mechanics here).
+- Generally if you use rain dance on Sceptile you should get at least +1 Sp. Atk (rare cases +2 or +3).
+- Something like Marowak or Rhydon might find some utility.
 
 **Forecast**
 - Recovers 1/8 HP in Weather each turn (sandstorm is not considered weather).
@@ -646,7 +649,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 ---
 
 ## Type-Changing Abilities
-These abilities change move typing only and do not add extra damage boosts.
+These abilities change move type and provide a 20% to the changed damage type.
 
 **Dragonize**
 - Feraligatr
@@ -762,6 +765,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 - Honchkrow remains high attack/sp atk and high hp with low defenses
 - Unown now 70 in all stats total 420
 - Tropious gained HP 130 vs 99. Other stats mostly the same rounded up or down.
+- Mightyena gained Hp(+15), def(+10), and spDef(+10)
 
 **Sableye**
 - Keen Eye/ Pickup (new flavor text: Finds Gem instead of a (Starf) Berry for stat boost in battle.)

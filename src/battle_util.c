@@ -2807,8 +2807,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     }
                     break;
                 case ABILITY_LIGHTNING_ROD:
-                    if ((gBattleMons[battler].statStages[STAT_SPATK] < MAX_STAT_STAGE && gDisableStructs[battler].isFirstTurn != 2)
-                    	&& WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN))
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & B_WEATHER_RAIN))
+                    {
+                    	if (gBattleMons[battler].statStages[STAT_SPATK] <= DEFAULT_STAT_STAGE
+                    	   && (Random() % 2) == 0)
                     {
                         gBattleMons[battler].statStages[STAT_SPATK]++;
                         gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_SPATK;
@@ -2817,7 +2819,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleScripting.battler = battler;
                         effect++;
                     }
-                    break;    
+                    	else if (gBattleMons[battler].statStages[STAT_SPATK] < MAX_STAT_STAGE
+              			&& gBattleMons[battler].statStages[STAT_SPATK] > DEFAULT_STAT_STAGE
+              			&& (Random() % 3) == 0)	
+                    {
+                        gBattleMons[battler].statStages[STAT_SPATK]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_SPATK;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_LightningRodActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    }
+                    break;   
                 case ABILITY_GUTS:
                     if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
                         && (gBattleMons[battler].statStages[STAT_ATK] <= DEFAULT_STAT_STAGE)

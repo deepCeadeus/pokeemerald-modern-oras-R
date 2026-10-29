@@ -6953,6 +6953,20 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_WATER && attacker->ability == ABILITY_TORRENT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (type == TYPE_BUG && attacker->ability == ABILITY_SWARM && attacker->hp <= (attacker->maxHP / 3))
+    	gBattleMovePower = (150 * gBattleMovePower) / 100;
+    	//Type Changing Abilities
+    	//Moves are still considered normal here if they change type later.
+    	//I assume its from the order of operations  
+    if ((type == TYPE_NORMAL || type == TYPE_STEEL)  && attacker->ability == ABILITY_METAL_COAT)
+    	gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if ((type == TYPE_NORMAL || type == TYPE_DRAGON) && attacker->ability == ABILITY_DRAGONIZE)
+    	gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if ((type == TYPE_NORMAL || type == TYPE_FAIRY) && attacker->ability == ABILITY_PIXILATE)
+    	gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if ((type == TYPE_NORMAL || type == TYPE_GHOST) && attacker->ability == ABILITY_MINDS_EYE)
+    	gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if ((type == TYPE_NORMAL || type == TYPE_FLYING) && attacker->ability == ABILITY_AERILATE)
+    	gBattleMovePower = (120 * gBattleMovePower) / 100;					
     	//Vital Spirit Buff
     if (type == TYPE_FIGHTING && attacker->ability == ABILITY_VITAL_SPIRIT && attacker->hp <= (attacker->maxHP / 3))
         gBattleMovePower = (150 * gBattleMovePower) / 100;
