@@ -1169,7 +1169,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_NINETALES] =
+    [SPECIES_NINETALES] = //modified
     {
         .baseHP        = 73,
         .baseAttack    = 76,
@@ -1177,7 +1177,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 100,
         .baseSpAttack  = 81,
         .baseSpDefense = 100,
-        .types = { TYPE_FIRE, TYPE_FIRE },
+        .types = { TYPE_FIRE, TYPE_GHOST }, //changed
+        .types_old = { TYPE_FIRE, TYPE_FIRE },
         .catchRate = 75,
         .expYield = 178,
         .evYield_HP        = 0,

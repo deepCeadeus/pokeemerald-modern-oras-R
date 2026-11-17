@@ -1704,6 +1704,8 @@ const u16 gEggMoves[] = {
               MOVE_SCREECH,
               MOVE_BODY_SLAM,
               MOVE_STOMP,
+              MOVE_LOW_KICK,
+              MOVE_METEOR_MASH,
               MOVE_SMELLING_SALT),
 
     egg_moves(CASTFORM,

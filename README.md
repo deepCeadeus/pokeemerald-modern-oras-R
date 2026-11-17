@@ -190,6 +190,7 @@ Several existing encounters were reduced from 5% to 4% to make room.
 - **Needle Arm:** 70 BP
 - **Bullet Seed:** 25 BP (Modernized)
 - **Dynamic Punch:** 5pp increased to 10pp
+- **Iron Tail:** Accuracy increased to 80
 
 ---
 
@@ -333,7 +334,7 @@ These moves:
 Available on:
 - Murkrow / Honchkrow
   -Taunt/Torment 
-- Shuppet / Banette
+- Shuppet / Banette / Ninetales
   -Taunt/Torment/Will O Wisp 
 - Sableye
   -Taunt/Torment/Will O Wisp/Recover
@@ -724,6 +725,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 - Phanpy Evo. line
 - Tyranitar
 - Probopass (lost sturdy->in return it gets boost from sandstorm and can learn volt switch)
+- Flygon (flygon is a special case ->Sand Veil sets sand for flygon)
 
 **Snow Warning**
 - Smoochum
@@ -790,6 +792,9 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
               MOVE_PLAY_ROUGH,
               MOVE_MOONBLAST),
 
+**Aron**
+- learns meteor mash as egg move from blastoise
+
 **Wailmer + Wailord**
 - Significant changes to base stats. 
 - Retains HP
@@ -810,6 +815,9 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 
 **Ledian**
 - Bug/Normal
+
+**Ninetails**
+- Fire/Ghost
 
 **Shedinja**
 - added +60 to special attack

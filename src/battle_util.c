@@ -2616,6 +2616,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_SAND_VEIL:
+                if (!(gBattleWeather & B_WEATHER_SANDSTORM_PERMANENT)
+                && (gBattleMons[battler].species == SPECIES_FLYGON))
+                {
+                    gBattleWeather = B_WEATHER_SANDSTORM;
+                    BattleScriptPushCursorAndCallback(BattleScript_SandstreamActivates);
+                    gBattleScripting.battler = battler;
+                    effect++;
+                }
+                break;    
             case ABILITY_DROUGHT:
                 if (!(gBattleWeather & B_WEATHER_SUN_PERMANENT))
                 {
