@@ -684,6 +684,8 @@ static const u16 sVulpixLevelUpLearnset[] = {
 static const u16 sNinetalesLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_EMBER),
     LEVEL_UP_MOVE( 1, MOVE_CURSE),
+    LEVEL_UP_MOVE( 1, MOVE_PAIN_SPLIT),
+    LEVEL_UP_MOVE( 1, MOVE_DESTINY_BOND),
     LEVEL_UP_MOVE( 1, MOVE_SABLEYE_WILL_O_WISP),
     LEVEL_UP_MOVE( 1, MOVE_SABLEYE_TAUNT),
     LEVEL_UP_MOVE( 1, MOVE_SABLEYE_TORMENT),
