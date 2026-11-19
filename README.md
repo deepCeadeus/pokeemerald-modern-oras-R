@@ -175,7 +175,7 @@ Several existing encounters were reduced from 5% to 4% to make room.
 - **Swallow:** In addition to healing it now cures status problems
 - **False Swipe:** 70 BP
 - **Metal Claw:** 65 BP, **20%** chance to flinch
-- **Poison Tail:** 55 BP, high crit ratio, **20%** poison chance
+- **Poison Tail:** 70 BP, high crit ratio, **20%** poison chance
 - **Poison Sting:** 25 BP, high crit ratio, **30%** poison chance
 - **Bubble:** 30 BP, **20%** chance to lower Speed
 - **ThunderShock:** 45 BP, **10%** paralysis chance
@@ -459,8 +459,6 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 
 **Rough Skin**
 - Buffed to take **1/8** damage on contact.
-- Distributed to: Gyarados (No moxie for you!), still has Intimidate.
-  -Gyarados already has a strong moveset Dragon Dance, Ice Fang, Waterfall, Headsmash, Earthquake, Crunch 
 - Sharpedo still has Rough Skin but has Speed Boost for second ability.
 
 **Plus & Minus**
@@ -607,6 +605,8 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Horsea
   - Octillery
   - Remoraid
+  - Absol
+  - Seviper
   - *REDACTED*
 
 **Defiant**
@@ -615,6 +615,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Mankey
   - Primeape
   - Annihilape
+  - Gyarados
   - Farfetch'd
   - Mightyena
   - Poochyena
