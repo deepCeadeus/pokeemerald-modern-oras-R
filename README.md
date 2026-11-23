@@ -488,13 +488,13 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 		- Example A -2 speed stage will go up +1 every turn if run away is triggered -> -2,-1,0,+1, Ability stops.
 		- the 1.2x defenses boost is mainly for triggering the ability consistantly it allows for the rare cases where you have a sliver of HP and can counter. 
 
-**Guts**
+**Guts(ATK) and Marvel Scale(DEF)**
 - Added a Guts Failsafe to activate at low HP
 - This exists as an alternative to Flame Orb
 - Works Like Run Away
-- +1 ATK at 30% HP if <=DEFAULT ATK STAGE
+- +1 ATK or DEF at 30% HP if <=DEFAULT ATK STAGE or DEF STAGE
 - Will only trigger if not under a status (STATUS1)
-- Will not go over +1 ATK
+- Will not go over +1 ATK or +1 DEF
 - Ramps up each turn to hit net +1 stage over default
 - If at +2 and above from sword dance, ETC it will not activate
 - Rare case exists where you get status after this activates and get boost from both failsafe and normal guts attack buff.
@@ -510,7 +510,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
         - Trace can change type on hit with correct hold effects.
         - Knock off can remove type by removing item (reverts to normal)
         - Trick can switch items and change type on hit
-- Judgment now changes with type!
+- Judgment now changes with type while using multitype ability
 
 **Legend Plate** 
 - Arceus gains second new ability
@@ -530,7 +530,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Eevee
   - Corphish
   - Crawdaunt
-  - Porygon-Z
+  - Porygon-Z (also has Transistor)
   - Hitmontop
   - Deoxys-A
   - Beedrill
@@ -542,6 +542,8 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Hitmonchan
   - Breloom
   - Ledian
+  - Dusclops
+  - Dusknoir
 
 **Reckless**
 - 1.2× boost to recoil moves.
@@ -555,7 +557,7 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
   - Machop
 
 **Berserk**
-- 1.5× Special Attack below 50% HP.
+- 1.5× Special Attack below 50% HP. (its a multiplier like gen 3 Guts)
 - Given to:
   - Omastar (**LORD HELIX**)
   - Farigiraf
@@ -645,8 +647,10 @@ Abilities can be changed using the **Ability Changer in Lilycove City**.
 
 **Multitype**
 - Arceus
+- Porygon
+- Porygon2
 - Unown (also has levitate)
-  - Unown has new movepool  
+  - Unown has new movepool + Buffed Stats
  
 ---
 
@@ -743,6 +747,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 - Snoorunt Evo. line
 - Regice
 - Glaceon (baton pass pivot)
+- Dusknoir
 
 **Air Lock**
 - Zubat Evo. line

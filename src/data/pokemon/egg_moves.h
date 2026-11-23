@@ -925,6 +925,7 @@ const u16 gEggMoves[] = {
               MOVE_SPITE,
               MOVE_DESTINY_BOND,
               MOVE_PSYCH_UP,
+              MOVE_WISH,
               MOVE_IMPRISON),
 
     egg_moves(GIRAFARIG,
@@ -1575,6 +1576,7 @@ const u16 gEggMoves[] = {
               MOVE_PAIN_SPLIT,
               MOVE_GRUDGE,
               MOVE_MEMENTO,
+              MOVE_WISH,
               MOVE_FAINT_ATTACK),
 
     egg_moves(BUDEW,

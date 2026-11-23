@@ -3821,6 +3821,7 @@ static const u16 sMisdreavusLevelUpLearnset[] = {
     LEVEL_UP_MOVE(45, MOVE_PERISH_SONG),
     LEVEL_UP_MOVE(53, MOVE_GRUDGE),
     LEVEL_UP_MOVE(55, MOVE_POWER_GEM),
+    LEVEL_UP_MOVE(60, MOVE_WISH),
     LEVEL_UP_END
 };
 
@@ -4472,6 +4473,7 @@ static const u16 sDonphanLevelUpLearnset[] = {
 static const u16 sPorygon2LevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION_2),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION),
     LEVEL_UP_MOVE( 9, MOVE_AGILITY),
     LEVEL_UP_MOVE(12, MOVE_PSYBEAM),
@@ -7820,7 +7822,7 @@ static const u16 sDusknoirLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_THUNDER_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_ICE_PUNCH),
     LEVEL_UP_MOVE( 1, MOVE_NIGHT_SHADE),
-    LEVEL_UP_MOVE( 1, MOVE_DISABLE),
+    LEVEL_UP_MOVE( 1, MOVE_LEECH_LIFE),
     LEVEL_UP_MOVE( 6, MOVE_DISABLE),
     LEVEL_UP_MOVE( 9, MOVE_FORESIGHT),
     LEVEL_UP_MOVE(14, MOVE_ASTONISH),
@@ -7909,6 +7911,7 @@ static const u16 sGalladeLevelUpLearnset[] = {
 static const u16 sGlaceonLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_BATON_PASS),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_SHARPEN),
     LEVEL_UP_MOVE( 1, MOVE_ICE_FANG),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_HELPING_HAND),
@@ -7988,6 +7991,7 @@ static const u16 sHonchkrowLevelUpLearnset[] = {
 
 static const u16 sLeafeonLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_MODERN_GROWTH),
     LEVEL_UP_MOVE( 1, MOVE_TAIL_WHIP),
     LEVEL_UP_MOVE( 1, MOVE_HELPING_HAND),
     LEVEL_UP_MOVE( 1, MOVE_WEATHER_BALL),
@@ -8115,6 +8119,7 @@ static const u16 sMantykeLevelUpLearnset[] = {
 
 static const u16 sMismagiusLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_GROWL),
+    LEVEL_UP_MOVE( 1, MOVE_WISH),
     LEVEL_UP_MOVE( 1, MOVE_NIGHT_SHADE),
     LEVEL_UP_MOVE( 1, MOVE_POWER_GEM),
     LEVEL_UP_MOVE( 1, MOVE_PSYWAVE),
@@ -8177,6 +8182,7 @@ static const u16 sMunchlaxLevelUpLearnset[] = {
 static const u16 sPorygonZLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION_2),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
+    LEVEL_UP_MOVE( 1, MOVE_TAIL_GLOW),
     LEVEL_UP_MOVE( 1, MOVE_CONVERSION),
     LEVEL_UP_MOVE( 7, MOVE_PSYBEAM),
     LEVEL_UP_MOVE(12, MOVE_AGILITY),

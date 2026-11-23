@@ -6699,7 +6699,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_STRONG_JAW && (gCurrentMove == MOVE_BITE || gCurrentMove == MOVE_CRUNCH || gCurrentMove == MOVE_FIRE_FANG || gCurrentMove == MOVE_HYPER_FANG || gCurrentMove == MOVE_ICE_FANG || gCurrentMove == MOVE_POISON_FANG || gCurrentMove == MOVE_THUNDER_FANG))
         attack = (150 * attack) / 100;      
-    if (attacker->ability == ABILITY_IRON_FIST && (gCurrentMove == MOVE_FIRE_PUNCH || gCurrentMove == MOVE_ICE_PUNCH || gCurrentMove == MOVE_THUNDER_PUNCH || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_SHADOW_PUNCH || gCurrentMove == MOVE_DIZZY_PUNCH || gCurrentMove == MOVE_DYNAMIC_PUNCH || gCurrentMove == MOVE_FOCUS_PUNCH || gCurrentMove == MOVE_COMET_PUNCH || gCurrentMove == MOVE_MEGA_PUNCH))
+    if (attacker->ability == ABILITY_IRON_FIST && (gCurrentMove == MOVE_FIRE_PUNCH || gCurrentMove == MOVE_ICE_PUNCH || gCurrentMove == MOVE_THUNDER_PUNCH || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_SHADOW_PUNCH || gCurrentMove == MOVE_DIZZY_PUNCH || gCurrentMove == MOVE_DYNAMIC_PUNCH || gCurrentMove == MOVE_FOCUS_PUNCH || gCurrentMove == MOVE_COMET_PUNCH || gCurrentMove == MOVE_MEGA_PUNCH || gCurrentMove == MOVE_SUCKER_PUNCH))
     	attack = (120 * attack) / 100; 
     if (attacker->ability == ABILITY_RECKLESS && (gCurrentMove == MOVE_JUMP_KICK || gCurrentMove == MOVE_TAKE_DOWN || gCurrentMove == MOVE_SUBMISSION || gCurrentMove == MOVE_HI_JUMP_KICK || gCurrentMove == MOVE_STRUGGLE || gCurrentMove == MOVE_DOUBLE_EDGE || gCurrentMove == MOVE_VOLT_TACKLE || gCurrentMove == MOVE_HEAD_SMASH))
         attack = (120 * attack) / 100; 
