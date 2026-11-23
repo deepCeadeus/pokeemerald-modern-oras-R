@@ -2651,10 +2651,11 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
 
         	    if (!IS_BATTLER_OF_TYPE(battler, newType))
         	    {
-            		gBattleScripting.battler = battler;
+            		//gBattleScripting.battler = battler;
 			SET_BATTLER_TYPE(battler, newType);
 			PREPARE_TYPE_BUFFER(gBattleTextBuff1, newType);
 			BattleScriptPushCursorAndCallback(BattleScript_MultitypeActivates);
+			gBattleScripting.battler = battler;
 			effect++;
         	    }
     		}
@@ -2854,7 +2855,20 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                         gBattleScripting.battler = battler;
                         effect++;
                     }
-                    break;      
+                    break;
+                case ABILITY_MARVEL_SCALE:
+                    if ((gBattleMons[battler].hp <= (gBattleMons[battler].maxHP / 3))
+                        && (gBattleMons[battler].statStages[STAT_DEF] <= DEFAULT_STAT_STAGE)
+                    	&& !(gBattleMons[battler].status1))
+                    {
+                        gBattleMons[battler].statStages[STAT_DEF]++;
+                        gBattleScripting.animArg1 = STAT_ANIM_PLUS1 + STAT_DEF;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_MarvelScaleActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+                    }
+                    break;          
                 case ABILITY_TRUANT:
                     gDisableStructs[gBattlerAttacker].truantCounter ^= 1;
                     //TRUANT HEALS ON SLEEP STATUS

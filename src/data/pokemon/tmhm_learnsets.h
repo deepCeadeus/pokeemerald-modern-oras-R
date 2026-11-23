@@ -496,6 +496,7 @@ const union {
 
     [SPECIES_ARBOK] = { .learnset = {
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .TAUNT = TRUE,
@@ -4239,6 +4240,7 @@ const union {
         .FOCUS_PUNCH = TRUE,
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .ICE_BEAM = TRUE,
@@ -7986,6 +7988,7 @@ const union {
     [SPECIES_MILOTIC] = { .learnset = {
         .WATER_PULSE = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HAIL = TRUE,
         .HIDDEN_POWER = TRUE,
         .ICE_BEAM = TRUE,
@@ -9142,7 +9145,9 @@ const union {
 
     [SPECIES_HUNTAIL] = { .learnset = {
         .WATER_PULSE = TRUE,
+        .CALM_MIND = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HAIL = TRUE,
         .TAUNT = TRUE,
         .HIDDEN_POWER = TRUE,
@@ -9171,6 +9176,7 @@ const union {
         .WATER_PULSE = TRUE,
         .CALM_MIND = TRUE,
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HAIL = TRUE,
         .HIDDEN_POWER = TRUE,
         .ICE_BEAM = TRUE,
@@ -9291,6 +9297,7 @@ const union {
 
     [SPECIES_SEVIPER] = { .learnset = {
         .TOXIC = TRUE,
+        .BULK_UP = TRUE,
         .HIDDEN_POWER = TRUE,
         .SUNNY_DAY = TRUE,
         .TAUNT = TRUE,

@@ -4231,6 +4231,12 @@ BattleScript_GutsActivates::
 	waitmessage B_WAIT_TIME_LONG
 	end3			
 
+BattleScript_MarvelScaleActivates::
+	playanimation BS_ATTACKER, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_PKMNRAISEDDEFABILITY
+	waitmessage B_WAIT_TIME_LONG
+	end3		
+
 BattleScript_TraceActivates::
 	pause B_WAIT_TIME_SHORT
 	printstring STRINGID_PKMNTRACED
@@ -4457,7 +4463,8 @@ BattleScript_ColorChangeActivates::
 	return
 
 BattleScript_MultitypeActivates::
-    	printstring STRINGID_PKMNCHANGEDTYPEWITH
+    	pause B_WAIT_TIME_SHORT
+    	printstring STRINGID_PKMNMULTITYPE
     	waitmessage B_WAIT_TIME_LONG
     	end3
 
