@@ -703,7 +703,8 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 - **Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 
 **Sandstorm update** -> Rock-type Pokemon get 1.5x Special Defense boost in sandstorm like gen iv.
-- NEW: STEEl types get boost 1.3x to STEEL MOVES
+- NEW: ROCK types get boost 1.3x to ROCK MOVES
+- NEW: STEEL types get boost 1.3x to STEEL MOVES
 - NEW: GROUND types get boost 1.3x to GROUND MOVES
 - **Restricted to type unlike sun/rain fire/water boosts. Have to be adapted to damaging weather.**
 

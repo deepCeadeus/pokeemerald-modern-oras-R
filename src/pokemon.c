@@ -6914,6 +6914,13 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     // NEW BONUS 
     if (WEATHER_HAS_EFFECT2
     && (gBattleWeather & B_WEATHER_SANDSTORM)
+    && (attacker->type1 == TYPE_ROCK || attacker->type2 == TYPE_ROCK)
+    && type == TYPE_ROCK)
+    {
+    gBattleMovePower = (130 * gBattleMovePower) / 100;
+    }
+    if (WEATHER_HAS_EFFECT2
+    && (gBattleWeather & B_WEATHER_SANDSTORM)
     && (attacker->type1 == TYPE_GROUND || attacker->type2 == TYPE_GROUND)
     && type == TYPE_GROUND)
     {
