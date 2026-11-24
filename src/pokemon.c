@@ -12368,7 +12368,7 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_GOLDUCK               //-Psychic
     || species == SPECIES_KINGLER               //-Steel
     || species == SPECIES_MEGANIUM              //-Fairy
-    || species == SPECIES_TYPHLOSION            //-Ground
+    || species == SPECIES_TYPHLOSION            //-Ghost
     || species == SPECIES_FERALIGATR            //-Dragon
     || species == SPECIES_NOCTOWL               //+Normal, -Psychic (+new ability to maintain Normal Type STAB)
     || species == SPECIES_SUNFLORA              //-Fire
@@ -12389,7 +12389,8 @@ u8 GetTypeBySpecies(u16 species, u8 typeNum)
     || species == SPECIES_PINSIR                //-Flying
     || species == SPECIES_BLASTOISE             //-Steel
     || species == SPECIES_NINETALES             //-Ghost
-    || species == SPECIES_LEDIAN                //+Normal, -Bug
+    || species == SPECIES_BANETTE               //-Normal
+    || species == SPECIES_LEDIAN                //-Normal, +Bug
     || species == SPECIES_SWELLOW               //-Fighting
     || species == SPECIES_AMPHAROS))            //-Dragon
     {

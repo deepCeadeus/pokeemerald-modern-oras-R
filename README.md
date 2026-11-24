@@ -166,6 +166,7 @@ Several existing encounters were reduced from 5% to 4% to make room.
 
 ### Buffed Moves
 - **Air Cutter:** 70 BP Special Atk
+- **Sharpen:** Also boosts speed along with attack
 - **Steel Wing:** 70 BP, 20% chance to raise def up from 10%
 - **Rapid Spin:** 50 BP, Raises SPEED +1 stage (Modernized) 
 - **Binding Moves:** Moves like bind, clamp, whirlpool remove 1/8 hp per turn for 2-5 turns
@@ -774,6 +775,7 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 - Unown now 70 in all stats total 420
 - Tropious gained HP 130 vs 99. Other stats mostly the same rounded up or down.
 - Mightyena gained Hp(+15), def(+10), and spDef(+10)
+- Porygon recieved +5 hp, +10 atk and +10 spd total 420 base stats now. 
 
 **Sableye**
 - Keen Eye/ Pickup (new flavor text: Finds Gem instead of a (Starf) Berry for stat boost in battle.)
@@ -821,6 +823,9 @@ A workaround was applied so correct hold items give the 1.2× boost to type chan
 
 **Ledian**
 - Bug/Normal
+
+**Banette**
+- Ghost/Normal
 
 **Ninetails**
 - Fire/Ghost

@@ -2228,7 +2228,7 @@ const struct BattleMove gBattleMoves[MOVES_COUNT] =
 
     [MOVE_SHARPEN] =
     {
-        .effect = EFFECT_ATTACK_UP,
+        .effect = EFFECT_DRAGON_DANCE,
         .power = 0,
         .type = TYPE_NORMAL,
         .accuracy = 0,

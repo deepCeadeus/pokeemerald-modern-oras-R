@@ -635,7 +635,7 @@ static const u8 sHyperFangDescription[] = _(
 
 static const u8 sSharpenDescription[] = _(
     "Reduces the polygon count\n"
-    "and raises Attack.");
+    "to raise Attack and Speed.");
 
 static const u8 sConversionDescription[] = _(
     "Changes the user's type\n"

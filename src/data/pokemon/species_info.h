@@ -4166,12 +4166,15 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_PORYGON] =
+    [SPECIES_PORYGON] = //modified
     {
-        .baseHP        = 65,
-        .baseAttack    = 60,
+        .baseHP        = 70, //+5
+        .baseHP_old        = 65,
+        .baseAttack    = 70, //+10
+        .baseAttack_old    = 60,
         .baseDefense   = 70,
-        .baseSpeed     = 40,
+        .baseSpeed     = 50, //+10
+        .baseSpeed_old     = 40,
         .baseSpAttack  = 85,
         .baseSpDefense = 75,
         .types = { TYPE_NORMAL, TYPE_NORMAL },
@@ -10846,7 +10849,7 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .noFlip = FALSE,
     },
 
-    [SPECIES_BANETTE] =
+    [SPECIES_BANETTE] = //modified
     {
         .baseHP        = 64,
         .baseAttack    = 115,
@@ -10854,7 +10857,8 @@ const struct SpeciesInfo gSpeciesInfo[] =
         .baseSpeed     = 65,
         .baseSpAttack  = 83,
         .baseSpDefense = 63,
-        .types = { TYPE_GHOST, TYPE_GHOST },
+        .types = { TYPE_GHOST, TYPE_NORMAL },
+        .types_old = { TYPE_GHOST, TYPE_GHOST },
         .catchRate = 45,
         .expYield = 179,
         .evYield_HP        = 0,

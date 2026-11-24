@@ -3706,7 +3706,7 @@
               },
               {
                 "min_level": 15,
-                "max_level": 25,
+                "max_level": 15,
                 "species": "SPECIES_PORYGON"
               }
             ]
@@ -3735,8 +3735,8 @@
                 "species": "SPECIES_POLITOED"
               },
               {
-                "min_level": 20,
-                "max_level": 30,
+                "min_level": 15,
+                "max_level": 15,
                 "species": "SPECIES_PORYGON"
               }
             ]
@@ -3766,7 +3766,7 @@
               },
               {
                 "min_level": 15,
-                "max_level": 20,
+                "max_level": 15,
                 "species": "SPECIES_PORYGON"
               }
             ]

@@ -6805,6 +6805,7 @@ static const u8 sShuppetTutorLearnset[] =
     TUTOR(MOVE_SNORE),
     TUTOR(MOVE_SUBSTITUTE),
     TUTOR(MOVE_SWAGGER),
+    TUTOR(MOVE_SWORDS_DANCE),
     TUTOR(MOVE_THUNDER_WAVE),
     0xFF,
 };
@@ -6824,6 +6825,7 @@ static const u8 sBanetteTutorLearnset[] =
     TUTOR(MOVE_SNORE),
     TUTOR(MOVE_SUBSTITUTE),
     TUTOR(MOVE_SWAGGER),
+    TUTOR(MOVE_SWORDS_DANCE),
     TUTOR(MOVE_THUNDER_WAVE),
     0xFF,
 };
